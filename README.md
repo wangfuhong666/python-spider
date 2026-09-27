@@ -70,3 +70,26 @@ python 文件名.py
 - 采集结果类的 `csv` / `xlsx` 文件保留在仓库里，作为练习产物留档。
 - 部分脚本中的 **Cookie 与登录态**是调试时从浏览器复制粘贴的，仅供本机学习使用，多数已过期；如果你要复用这些脚本，请替换成自己的。
 - 本仓库代码**仅供学习与个人练习**。抓取任何网站前请阅读该网站的 `robots.txt` 与服务条款，控制请求频率，不要用于商业用途或对目标站点造成压力。
+
+## 自动同步（GitHub ↔ Gitee）
+
+本仓库在 GitHub 和 Gitee 各有一份，靠 GitHub Actions 双向保持一致：
+
+| 方向 | 工作流 | 触发时机 |
+| --- | --- | --- |
+| GitHub → Gitee | `.github/workflows/sync-to-gitee.yml` | 每次推送到 `main`（也可手动触发） |
+| Gitee → GitHub | `.github/workflows/sync-from-gitee.yml` | 每 6 小时检查一次（也可手动触发） |
+
+设计要点：
+
+- **只做快进（fast-forward）同步，从不 `force push`。** 如果两端出现了互不包含的提交，工作流会直接失败并在日志里说明，而不是悄悄覆盖掉另一边的代码。
+- GitHub → Gitee 依赖仓库 secret `GITEE_TOKEN`（Gitee 私人令牌，需 `projects` 权限）。令牌被撤销或过期后，同步会在日志里明确报错。
+- 日常本地提交时，`git push` 会通过一个 remote 上的两个 push 地址同时推到两端，不依赖 Actions；Actions 主要负责兜底「在网页上直接改代码」的情况。
+- 定时工作流在仓库连续 60 天无活动后会被 GitHub 自动暂停，需要去 Actions 页面手动重新启用。
+
+排查同步问题：
+
+```bash
+gh run list --workflow sync-to-gitee.yml
+gh run view <run-id> --log
+```
