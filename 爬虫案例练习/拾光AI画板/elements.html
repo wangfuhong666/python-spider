@@ -1,0 +1,578 @@
+<!DOCTYPE html><html lang="zh-CN" class="portal-static-bg portal-low-motion"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>拾光视界 | SHIGUANG VISION</title>
+    <meta name="description" content="拾光视界全学科可视化交互平台，连接物理、化学以及后续更多学科系统。">
+    <meta name="theme-color" content="#020617">
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="./assets/vendor/fonts/local-fonts.css?v=d70f85f9206e">
+    <link rel="stylesheet" href="./assets/portal.css?v=c6fb9a01dc53">
+    <script src="./portal.config.js?v=20260819225047"></script>
+</head>
+<body>
+    <div class="noise-overlay"></div>
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <div class="visual-canvas bg-video-fallback">
+        
+        <div class="video-overlay"></div>
+        <div class="ambient-glow g-1"></div>
+        <div class="ambient-glow g-2"></div>
+    </div>
+
+    <div class="portal-wrapper">
+        <header class="app-header">
+            <div class="brand">
+                <div class="brand-logotype">
+                    拾光视界 <span>SHIGUANG VISION</span>
+                </div>
+            </div>
+            <div class="header-status">
+                <span class="status-indicator"></span>
+                节点在线
+            </div>
+        </header>
+
+        <main class="portal-content">
+            <div class="view-grid">
+                <section class="branding-panel">
+                    <div class="brand-content">
+                        <div class="brand-eyebrow">UNIFIED ENTRANCE</div>
+                        <h1 class="main-title">学科可视化<br>交互系统</h1>
+                        <p class="main-desc">
+                            化抽象为具象，深度解析学科难点。<br>
+                            拾光视界，通过动态交互视觉重塑造认知边界。
+                        </p>
+                        <div class="system-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">直观</span>
+                                <span class="stat-label">解析学科难点</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">沉浸</span>
+                                <span class="stat-label">自主探索系统</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">精准</span>
+                                <span class="stat-label">量化核心模型</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">联动</span>
+                                <span class="stat-label">多维知识图谱</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="action-panel">
+                    <div class="portal-card portal-stage-subjects" id="portalCard" style="transform: translateY(0px) scale(1);">
+                        <div class="card-progress">
+                            <div class="step-indicator" id="stepIndicator">
+                                <div class="step step-1" data-step="1">01 身份登录</div>
+                                <div class="step-line"></div>
+                                <div class="step step-2 active" data-step="2">02 选择学科</div>
+                            </div>
+                        </div>
+
+                        <div class="stage" id="loginStage" aria-hidden="true" hidden="" style="display: none;">
+                            <div class="stage-header">
+                                <h2 id="stageTitle">身份验证</h2>
+                            </div>
+
+                            <div class="auth-tabs">
+                                <button class="auth-tab active" id="loginModeButton" type="button">登录</button>
+                                <button class="auth-tab" id="registerModeButton" type="button">注册</button>
+                            </div>
+
+                            <form class="auth-form" id="userLoginForm">
+                                <div class="input-group input-plain">
+                                    <input type="text" id="loginAccountInput" name="account" placeholder="用户名 / 手机号" aria-label="账号 / 手机号" required="" autocomplete="off">
+                                </div>
+                                <div class="input-group input-plain">
+                                    <input type="password" id="loginPasswordInput" name="password" placeholder="密码" aria-label="密码" required="">
+                                </div>
+                                <div class="form-utils">
+                                    <a href="#" class="btn-link-sm" id="forgotPasswordLink">忘记密码？</a>
+                                </div>
+                                <button type="submit" class="btn-primary" id="loginSubmitButton">
+                                    <span>确认登录</span>
+                                    <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                                        <path fill="currentColor" d="M16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8-1.41 1.41L16.17 11z"></path>
+                                    </svg>
+                                </button>
+                                <div class="form-footer">
+                                    <span>还没有账号？</span>
+                                    <button type="button" class="btn-link" id="switchToRegisterButton">立即注册</button>
+                                </div>
+                                <a class="founding-login-link" href="./founding-members/index.html" target="_blank" rel="noopener" data-founding-showcase-link="">
+                                    <span class="founding-login-mark" aria-hidden="true">▲</span>
+                                    <span class="founding-login-copy">
+                                        <span>FOUNDING MEMBER</span>
+                                        <strong>初创会员星图</strong>
+                                    </span>
+                                    <em>查看</em>
+                                </a>
+                            </form>
+
+                            <form class="auth-form" id="userRegisterForm" hidden="">
+                                <div class="identity-selector">
+                                    <label class="id-btn">
+                                        <input type="radio" name="identity" value="teacher" checked="">
+                                        <div class="id-btn-content">我是教师</div>
+                                    </label>
+                                    <label class="id-btn">
+                                        <input type="radio" name="identity" value="student">
+                                        <div class="id-btn-content">我是学生</div>
+                                    </label>
+                                </div>
+                                <div class="input-group input-plain">
+                                    <input type="text" id="registerUsernameInput" name="username" placeholder="用户名" aria-label="用户名" required="" autocomplete="off">
+                                </div>
+                                <div class="input-group input-plain">
+                                    <input type="tel" id="registerPhoneInput" name="phone" placeholder="手机号" aria-label="手机号" required="">
+                                </div>
+                                <div class="input-group input-plain">
+                                    <input type="email" id="registerEmailInput" name="email" placeholder="电子邮箱（用于找回密码）" aria-label="电子邮箱（用于找回密码）" required="">
+                                </div>
+                                <div class="input-group input-plain">
+                                    <input type="password" id="registerPasswordInput" name="password" placeholder="设置密码" aria-label="设置密码" required="">
+                                </div>
+                                <div class="input-group input-plain">
+                                    <input type="password" id="registerConfirmPasswordInput" name="confirmPassword" placeholder="确认密码" aria-label="确认密码" required="">
+                                </div>
+                                <div class="input-group input-plain">
+                                    <input type="text" id="registerInviteCodeInput" name="inviteCode" placeholder="邀请码（选填）" aria-label="邀请码（选填）">
+                                </div>
+                                <button type="submit" class="btn-primary" id="registerSubmitButton">注册并开始</button>
+                                <div class="form-footer">
+                                    <span>已有账号？</span>
+                                    <button type="button" class="btn-link" id="switchToLoginButton">返回登录</button>
+                                </div>
+                            </form>
+                            <div class="feedback-msg" id="loginFeedbackText"></div>
+                        </div>
+
+                        <div class="stage" id="subjectStage" aria-hidden="false" style="display: flex;">
+                            <div class="stage-header">
+                                <h2 id="subjectStageTitle">选择学科</h2>
+                                <p id="subjectStageSubtitle">请选择您要进入的学习领域</p>
+                            </div>
+                            <div id="availableSubjectGrid" class="subject-container">
+            <div class="subject-picker-toolbar">
+                <div class="school-group-switch" role="tablist" aria-label="选择学段">
+                    <button type="button" role="tab" data-school-group="secondary" aria-selected="true" class="is-active">初高中</button>
+                    <button type="button" role="tab" data-school-group="primary" aria-selected="false" class="">小学</button>
+                </div>
+            </div>
+            <div class="subject-grid" data-school-group="secondary">
+                
+                <a href="/subjects/physics/" class="subject-card" data-subject-key="physics" data-subject-action="enter">
+                    <div class="card-membership status-trial">试用会员</div>
+                    <div class="card-icon">⚛</div>
+                    <div class="card-info">
+                        <div class="card-title">物理</div>
+                        <div class="card-meta status-online">8/20 到期</div>
+                        
+                    </div>
+                    <div class="card-arrow"><svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"></path></svg></div>
+                </a>
+            
+                <a href="/subjects/chemistry/" class="subject-card" data-subject-key="chemistry" data-subject-action="enter">
+                    <div class="card-membership status-trial">试用会员</div>
+                    <div class="card-icon">⚗</div>
+                    <div class="card-info">
+                        <div class="card-title">化学</div>
+                        <div class="card-meta status-online">8/20 到期</div>
+                        
+                    </div>
+                    <div class="card-arrow"><svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"></path></svg></div>
+                </a>
+            
+                <a href="/subjects/biology/" class="subject-card" data-subject-key="biology" data-subject-action="enter">
+                    <div class="card-membership status-trial">试用会员</div>
+                    <div class="card-icon">🧬</div>
+                    <div class="card-info">
+                        <div class="card-title">生物</div>
+                        <div class="card-meta status-online">8/20 到期</div>
+                        
+                    </div>
+                    <div class="card-arrow"><svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"></path></svg></div>
+                </a>
+            
+                <a href="/subjects/math/" class="subject-card" data-subject-key="math" data-subject-action="enter">
+                    <div class="card-membership status-trial">试用会员</div>
+                    <div class="card-icon">∑</div>
+                    <div class="card-info">
+                        <div class="card-title">数学</div>
+                        <div class="card-meta status-online">8/20 到期</div>
+                        
+                    </div>
+                    <div class="card-arrow"><svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"></path></svg></div>
+                </a>
+            
+                <a href="/subjects/chinese/" class="subject-card" data-subject-key="chinese" data-subject-action="enter">
+                    <div class="card-membership status-trial">试用会员</div>
+                    <div class="card-icon">文</div>
+                    <div class="card-info">
+                        <div class="card-title">语文</div>
+                        <div class="card-meta status-online">8/20 到期</div>
+                        
+                    </div>
+                    <div class="card-arrow"><svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"></path></svg></div>
+                </a>
+            
+                <a href="/subjects/geography/" class="subject-card" data-subject-key="geography" data-subject-action="enter">
+                    <div class="card-membership status-trial">试用会员</div>
+                    <div class="card-icon">🌍</div>
+                    <div class="card-info">
+                        <div class="card-title">地理</div>
+                        <div class="card-meta status-online">8/20 到期</div>
+                        
+                    </div>
+                    <div class="card-arrow"><svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"></path></svg></div>
+                </a>
+            
+            </div>
+        
+                <div class="subject-divider"><span>功能/提分系统</span></div>
+                <div class="special-entrance-container special-entrance-quad">
+                    
+                <a href="/coursewares/" class="subject-card subject-card-shortcut" data-subject-key="courseware_forum" data-subject-action="enter">
+                    
+                    <div class="card-icon">✨</div>
+                    <div class="card-info">
+                        <div class="card-title">拾光共享空间</div>
+                        <div class="card-meta status-online">点击直接进入</div>
+                        
+                    </div>
+                    <div class="card-arrow"><svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"></path></svg></div>
+                </a>
+            
+                <a href="/subjects/pocket/" class="subject-card subject-card-wide subject-card-single-line" data-subject-key="pocket_system" data-subject-action="enter">
+                    
+                    <div class="card-icon">📱</div>
+                    <div class="card-info">
+                        <div class="card-title">拾光随身刷</div>
+                        <div class="card-meta status-founding">已开通 6 科刷题</div>
+                        <div class="card-note">建议手机端使用</div>
+                    </div>
+                    <div class="card-arrow"><svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"></path></svg></div>
+                </a>
+            
+                <a href="http://quanxipingce.shiguangtongxue.cn/?t=13&amp;l=925ab5e2be86" class="subject-card subject-card-shortcut" data-subject-key="jilin_rank_system" data-subject-action="enter">
+                    
+                    <div class="card-icon">🎯</div>
+                    <div class="card-info">
+                        <div class="card-title">物理全息评测</div>
+                        <div class="card-meta status-online">点击直接进入</div>
+                        <div class="card-note">无需登录，点击直达</div>
+                    </div>
+                    <div class="card-arrow"><svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"></path></svg></div>
+                </a>
+            
+                <a href="https://ceshi.shiguangtongxue.cn/" class="subject-card subject-card-shortcut subject-card-beta" data-subject-key="ai_blackboard" data-subject-action="enter">
+                    
+                    <div class="card-icon">拾</div>
+                    <div class="card-info">
+                        <div class="card-title">拾光AI白板</div>
+                        <div class="card-meta status-beta">内测</div>
+                        
+                    </div>
+                    <div class="card-arrow"><svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"></path></svg></div>
+                </a>
+            
+                </div>
+            </div>
+                            <div class="stage-actions">
+                                <button class="btn-link" id="changeAccountButton" type="button">更换账号</button>
+                            </div>
+                        </div>
+                        
+                        <!-- 客户端下载入口（置于卡片最底部内部，按设备显示） -->
+                        <div id="windowsDownloadContainer" class="portal-download-container" style="display: block; text-align: center; margin-top: 24px; padding-top: 20px; border-top: 1px dashed rgba(255, 255, 255, 0.08);" aria-hidden="false">
+                            <a id="windowsDownloadLink" href="/api/unified/download/windows-client" download="" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 10px 20px; font-size: 13px; font-weight: 600; color: rgba(255, 255, 255, 0.7); background: transparent; border-radius: 8px; text-decoration: none; transition: 0.25s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(255, 255, 255, 0.05)';" onmouseout="this.style.color='rgba(255, 255, 255, 0.7)'; this.style.background='transparent';" data-download-platform="windows" aria-hidden="false" title="">
+                                <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" style="fill: currentColor;">
+                                    <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"></path>
+                                </svg>
+                                下载 Windows PC 客户端
+                            </a>
+                            <a id="androidDownloadLink" href="/api/unified/download/android-client" download="" style="display: none; align-items: center; justify-content: center; gap: 8px; padding: 10px 20px; font-size: 13px; font-weight: 600; color: rgba(255, 255, 255, 0.7); background: transparent; border-radius: 8px; text-decoration: none; transition: all 0.25s ease;" onmouseover="this.style.color='#fff'; this.style.background='rgba(255, 255, 255, 0.05)';" onmouseout="this.style.color='rgba(255, 255, 255, 0.7)'; this.style.background='transparent';" data-download-platform="android" aria-hidden="true" title="">
+                                <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" style="fill: currentColor;">
+                                    <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"></path>
+                                </svg>
+                                下载安卓App
+                            </a>
+                        </div>
+                        <script>
+                            (function() {
+                                const config = window.__SHG_PORTAL_CONFIG__ || {};
+                                const downloadContainer = document.getElementById('windowsDownloadContainer');
+                                const windowsDownloadLink = document.getElementById('windowsDownloadLink');
+                                const androidDownloadLink = document.getElementById('androidDownloadLink');
+                                const windowsDownloadUrl = String(config.windowsClientDownloadUrl || '').trim();
+                                const androidDownloadUrl = String(config.androidClientDownloadUrl || '').trim();
+                                if (windowsDownloadLink && windowsDownloadUrl) {
+                                    windowsDownloadLink.href = windowsDownloadUrl;
+                                }
+                                if (androidDownloadLink && androidDownloadUrl) {
+                                    androidDownloadLink.href = androidDownloadUrl;
+                                }
+                                if (downloadContainer) {
+                                    downloadContainer.style.display = 'none';
+                                    downloadContainer.setAttribute('aria-hidden', 'true');
+                                }
+                                if (windowsDownloadLink) windowsDownloadLink.style.display = 'none';
+                                if (androidDownloadLink) androidDownloadLink.style.display = 'none';
+                            })();
+                        </script>
+
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer class="app-footer">
+            <div class="footer-links">
+                <span>© 2026 博学广益教育咨询有限责任公司</span>
+            </div>
+        </footer>
+    </div>
+
+    <div class="portal-modal hidden" id="forgotPasswordModal">
+        <div class="portal-modal-backdrop" data-portal-modal-close="forgotPasswordModal"></div>
+        <div class="portal-modal-card">
+            <div class="portal-modal-header">
+                <div>
+                    <h3 class="portal-modal-title">重置登录密码</h3>
+                    <p class="portal-modal-subtitle">请输入注册手机号、注册邮箱，并设置新的登录密码。信息核验通过后会立即生效。</p>
+                </div>
+                <button type="button" class="portal-modal-close" data-portal-modal-close="forgotPasswordModal" aria-label="关闭">
+                    <span>×</span>
+                </button>
+            </div>
+            <form class="portal-modal-form" id="forgotPasswordForm">
+                <div class="input-group">
+                    <input type="tel" id="forgotPhoneInput" name="phone" placeholder=" " required="">
+                    <label>手机号</label>
+                </div>
+                <div class="input-group">
+                    <input type="email" id="forgotEmailInput" name="email" placeholder=" " required="">
+                    <label>注册邮箱</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="forgotNewPasswordInput" name="newPassword" placeholder=" " autocomplete="new-password" required="">
+                    <label>新密码</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="forgotConfirmPasswordInput" name="confirmPassword" placeholder=" " autocomplete="new-password" required="">
+                    <label>确认新密码</label>
+                </div>
+                <div class="feedback-msg" id="forgotPasswordFeedbackText"></div>
+                <div class="portal-modal-actions">
+                    <button type="button" class="btn-secondary" data-portal-modal-close="forgotPasswordModal">取消</button>
+                    <button type="submit" class="btn-primary" id="forgotPasswordSubmitButton">确认重置</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="portal-modal hidden" id="passwordChangeModal">
+        <div class="portal-modal-backdrop"></div>
+        <div class="portal-modal-card">
+            <div class="portal-modal-header">
+                <div>
+                    <h3 class="portal-modal-title">先修改登录密码</h3>
+                    <p class="portal-modal-subtitle">后台已为您的账号发放初始密码。请先修改为新的登录密码，再进入学科系统。</p>
+                </div>
+            </div>
+            <form class="portal-modal-form" id="passwordChangeForm">
+                <div class="input-group">
+                    <input type="password" id="passwordChangeCurrentInput" name="currentPassword" placeholder=" " required="">
+                    <label>当前密码 / 初始密码</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="passwordChangeNewInput" name="newPassword" placeholder=" " required="">
+                    <label>新的密码</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="passwordChangeConfirmInput" name="confirmPassword" placeholder=" " required="">
+                    <label>确认新的密码</label>
+                </div>
+                <div class="feedback-msg" id="passwordChangeFeedbackText"></div>
+                <div class="portal-modal-actions">
+                    <button type="button" class="btn-secondary" id="passwordChangeLogoutButton">退出当前账号</button>
+                    <button type="submit" class="btn-primary" id="passwordChangeSubmitButton">保存新密码</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="./assets/portal.js?v=a40f94339049"></script>
+    <script>
+        (function () {
+            const isMobileOrTablet = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            const saveDataEnabled = Boolean(navigator.connection && navigator.connection.saveData);
+            const backgroundVideo = document.querySelector('.bg-video');
+            if (!backgroundVideo) return;
+            const visualCanvas = backgroundVideo.closest('.visual-canvas');
+            const backgroundVideoSource = backgroundVideo.querySelector('source');
+            const config = window.__SHG_PORTAL_CONFIG__ || {};
+            const transitionClassName = 'video-loop-transition';
+            const loopTransitionLeadSeconds = 0.55;
+            const startDelayMs = Number(backgroundVideo.dataset.videoLoadDelayMs || 900);
+            const fallbackVideoUrl = backgroundVideo.dataset.defaultVideoSrc || '';
+            const configuredVideoUrl = typeof config.backgroundVideoUrl === 'string'
+                ? config.backgroundVideoUrl.trim()
+                : '';
+            const preferredVideoUrl = configuredVideoUrl || fallbackVideoUrl;
+            let isRestartingLoop = false;
+            let hasStarted = false;
+            let attemptedFallback = false;
+
+            function enableBackgroundVideoFallback() {
+                visualCanvas?.classList.add('bg-video-fallback');
+            }
+
+            function disableBackgroundVideoFallback() {
+                visualCanvas?.classList.remove('bg-video-fallback');
+            }
+
+            function markBackgroundVideoReady(videoElement) {
+                if (!videoElement) return;
+                if (videoElement.currentTime > 0 || !videoElement.paused) {
+                    disableBackgroundVideoFallback();
+                }
+            }
+
+            function primeBackgroundVideo(videoElement) {
+                if (!videoElement) return;
+                videoElement.autoplay = true;
+                videoElement.muted = true;
+                videoElement.defaultMuted = true;
+                videoElement.loop = false;
+                videoElement.preload = 'metadata';
+                videoElement.controls = false;
+                videoElement.playsInline = true;
+                videoElement.disablePictureInPicture = true;
+                videoElement.disableRemotePlayback = true;
+            }
+
+            function safePlay(videoElement) {
+                const playPromise = videoElement.play();
+                if (playPromise && typeof playPromise.then === 'function') {
+                    playPromise.then(() => {
+                        window.setTimeout(() => {
+                            markBackgroundVideoReady(videoElement);
+                        }, 180);
+                    }).catch(() => {
+                        enableBackgroundVideoFallback();
+                    });
+                }
+            }
+
+            function applyVideoSource(nextVideoUrl) {
+                if (!nextVideoUrl || !backgroundVideoSource || backgroundVideoSource.getAttribute('src') === nextVideoUrl) {
+                    return;
+                }
+                backgroundVideoSource.setAttribute('src', nextVideoUrl);
+                backgroundVideo.load();
+            }
+
+            function finishLoopTransition() {
+                window.setTimeout(() => {
+                    visualCanvas?.classList.remove(transitionClassName);
+                    isRestartingLoop = false;
+                }, 420);
+            }
+
+            function restartLoopSoftly() {
+                if (isRestartingLoop) return;
+                isRestartingLoop = true;
+                visualCanvas?.classList.add(transitionClassName);
+
+                try {
+                    backgroundVideo.pause();
+                    backgroundVideo.currentTime = 0;
+                } catch (_) {
+                    isRestartingLoop = false;
+                    visualCanvas?.classList.remove(transitionClassName);
+                    return;
+                }
+
+                const playPromise = backgroundVideo.play();
+                if (playPromise && typeof playPromise.then === 'function') {
+                    playPromise.then(() => {
+                        markBackgroundVideoReady(backgroundVideo);
+                        finishLoopTransition();
+                    }).catch(() => {
+                        isRestartingLoop = false;
+                        enableBackgroundVideoFallback();
+                    });
+                    return;
+                }
+
+                finishLoopTransition();
+            }
+
+            function handleVideoError() {
+                if (!attemptedFallback && configuredVideoUrl && configuredVideoUrl !== fallbackVideoUrl) {
+                    attemptedFallback = true;
+                    applyVideoSource(fallbackVideoUrl);
+                    safePlay(backgroundVideo);
+                    return;
+                }
+                enableBackgroundVideoFallback();
+            }
+
+            function startBackgroundVideo() {
+                if (hasStarted || !preferredVideoUrl) return;
+                hasStarted = true;
+                primeBackgroundVideo(backgroundVideo);
+                backgroundVideo.style.opacity = '1';
+                backgroundVideo.addEventListener('timeupdate', () => {
+                    markBackgroundVideoReady(backgroundVideo);
+                    if (!backgroundVideo.duration || isRestartingLoop) return;
+                    if (backgroundVideo.duration - backgroundVideo.currentTime <= loopTransitionLeadSeconds) {
+                        restartLoopSoftly();
+                    }
+                });
+                backgroundVideo.addEventListener('ended', restartLoopSoftly);
+                backgroundVideo.addEventListener('playing', () => markBackgroundVideoReady(backgroundVideo));
+                backgroundVideo.addEventListener('error', handleVideoError);
+                applyVideoSource(preferredVideoUrl);
+                safePlay(backgroundVideo);
+            }
+
+            function scheduleVideoStart() {
+                if (document.visibilityState === 'hidden') {
+                    document.addEventListener('visibilitychange', () => {
+                        if (document.visibilityState === 'visible') {
+                            scheduleVideoStart();
+                        }
+                    }, { once: true });
+                    return;
+                }
+
+                window.setTimeout(() => {
+                    if ('requestIdleCallback' in window) {
+                        window.requestIdleCallback(startBackgroundVideo, { timeout: 2500 });
+                    } else {
+                        startBackgroundVideo();
+                    }
+                }, startDelayMs);
+            }
+
+            if (isMobileOrTablet || prefersReducedMotion || saveDataEnabled) {
+                document.documentElement.classList.add('portal-static-bg', 'portal-low-motion');
+                enableBackgroundVideoFallback();
+                backgroundVideo.remove();
+                return;
+            }
+
+            scheduleVideoStart();
+        })();
+    </script>
+
+
+</body></html>

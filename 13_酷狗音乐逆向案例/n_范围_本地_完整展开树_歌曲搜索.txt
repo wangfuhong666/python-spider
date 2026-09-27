@@ -1,0 +1,2046 @@
+{
+  "captureContext": "Chrome DevTools paused scope > Local > n",
+  "capturedAt": "2026-08-29T11:54:30.092Z",
+  "value": {
+    "$id": 1,
+    "$kind": "[object HTMLScriptElement]",
+    "nodeType": 1,
+    "nodeName": "SCRIPT",
+    "outerHTML": "<script src=\"https://complexsearch.kugou.com/v2/search/song?callback=callback123&amp;srcappid=2919&amp;clientver=1000&amp;clienttime=1788003140105&amp;mid=b36c019bf55de6e1353531a57041fe50&amp;uuid=b36c019bf55de6e1353531a57041fe50&amp;dfid=4FL90z1KtMfa1Dmkch2Tny2Z&amp;keyword=%E6%9E%97%E4%BF%8A%E6%9D%B0&amp;page=1&amp;pagesize=30&amp;bitrate=0&amp;isfuzzy=0&amp;inputtype=0&amp;platform=WebFilter&amp;userid=0&amp;iscorrection=1&amp;privilege_filter=0&amp;filter=10&amp;token=&amp;appid=1014&amp;signature=18f055ff41d8aa86bd320e70305cb5b7\"></script>",
+    "attributes": {
+      "src": "https://complexsearch.kugou.com/v2/search/song?callback=callback123&srcappid=2919&clientver=1000&clienttime=1788003140105&mid=b36c019bf55de6e1353531a57041fe50&uuid=b36c019bf55de6e1353531a57041fe50&dfid=4FL90z1KtMfa1Dmkch2Tny2Z&keyword=%E6%9E%97%E4%BF%8A%E6%9D%B0&page=1&pagesize=30&bitrate=0&isfuzzy=0&inputtype=0&platform=WebFilter&userid=0&iscorrection=1&privilege_filter=0&filter=10&token=&appid=1014&signature=18f055ff41d8aa86bd320e70305cb5b7"
+    },
+    "properties": {
+      "jQuery3700248323216535171861": {
+        "$id": 2,
+        "$kind": "[object Object]",
+        "properties": {
+          "events": {
+            "$id": 3,
+            "$kind": "[object Object]",
+            "properties": {
+              "error": {
+                "$id": 4,
+                "$kind": "[object Array]"
+              },
+              "load": {
+                "$id": 5,
+                "$kind": "[object Array]"
+              }
+            }
+          },
+          "handle": {
+            "$kind": "Function",
+            "name": "anonymous",
+            "length": 1
+          }
+        }
+      },
+      "src": "https://complexsearch.kugou.com/v2/search/song?callback=callback123&srcappid=2919&clientver=1000&clienttime=1788003140105&mid=b36c019bf55de6e1353531a57041fe50&uuid=b36c019bf55de6e1353531a57041fe50&dfid=4FL90z1KtMfa1Dmkch2Tny2Z&keyword=%E6%9E%97%E4%BF%8A%E6%9D%B0&page=1&pagesize=30&bitrate=0&isfuzzy=0&inputtype=0&platform=WebFilter&userid=0&iscorrection=1&privilege_filter=0&filter=10&token=&appid=1014&signature=18f055ff41d8aa86bd320e70305cb5b7",
+      "type": "",
+      "noModule": false,
+      "charset": "",
+      "async": true,
+      "defer": false,
+      "crossOrigin": null,
+      "text": "",
+      "referrerPolicy": "",
+      "fetchPriority": "auto",
+      "event": "",
+      "htmlFor": "",
+      "integrity": "",
+      "blocking": {
+        "$id": 6,
+        "$kind": "[object DOMTokenList]",
+        "properties": {
+          "entries": {
+            "$kind": "Function",
+            "name": "entries",
+            "length": 0
+          },
+          "keys": {
+            "$kind": "Function",
+            "name": "keys",
+            "length": 0
+          },
+          "values": {
+            "$kind": "Function",
+            "name": "values",
+            "length": 0
+          },
+          "forEach": {
+            "$kind": "Function",
+            "name": "forEach",
+            "length": 1
+          },
+          "length": 0,
+          "value": "",
+          "add": {
+            "$kind": "Function",
+            "name": "add",
+            "length": 0
+          },
+          "contains": {
+            "$kind": "Function",
+            "name": "contains",
+            "length": 1
+          },
+          "item": {
+            "$kind": "Function",
+            "name": "item",
+            "length": 1
+          },
+          "remove": {
+            "$kind": "Function",
+            "name": "remove",
+            "length": 0
+          },
+          "replace": {
+            "$kind": "Function",
+            "name": "replace",
+            "length": 2
+          },
+          "supports": {
+            "$kind": "Function",
+            "name": "supports",
+            "length": 1
+          },
+          "toggle": {
+            "$kind": "Function",
+            "name": "toggle",
+            "length": 1
+          },
+          "toString": {
+            "$kind": "Function",
+            "name": "toString",
+            "length": 0
+          },
+          "constructor": {
+            "$kind": "Function",
+            "name": "DOMTokenList",
+            "length": 0
+          }
+        }
+      },
+      "textContent": "",
+      "innerText": "",
+      "constructor": {
+        "$kind": "Function",
+        "name": "HTMLScriptElement",
+        "length": 0
+      },
+      "attributionSrc": "",
+      "title": "",
+      "lang": "",
+      "translate": true,
+      "dir": "",
+      "hidden": false,
+      "inert": false,
+      "accessKey": "",
+      "draggable": false,
+      "spellcheck": true,
+      "autocapitalize": "",
+      "editContext": null,
+      "contentEditable": "inherit",
+      "enterKeyHint": "",
+      "isContentEditable": false,
+      "inputMode": "",
+      "virtualKeyboardPolicy": "",
+      "offsetParent": null,
+      "offsetTop": 0,
+      "offsetLeft": 0,
+      "offsetWidth": 0,
+      "offsetHeight": 0,
+      "popover": null,
+      "outerText": "",
+      "writingSuggestions": "true",
+      "onabort": null,
+      "onbeforeinput": null,
+      "onbeforematch": null,
+      "onbeforetoggle": null,
+      "onblur": null,
+      "oncancel": null,
+      "oncanplay": null,
+      "oncanplaythrough": null,
+      "onchange": null,
+      "onclick": null,
+      "onclose": null,
+      "oncommand": null,
+      "oncontentvisibilityautostatechange": null,
+      "oncontextlost": null,
+      "oncontextmenu": null,
+      "oncontextrestored": null,
+      "oncuechange": null,
+      "ondblclick": null,
+      "ondrag": null,
+      "ondragend": null,
+      "ondragenter": null,
+      "ondragleave": null,
+      "ondragover": null,
+      "ondragstart": null,
+      "ondrop": null,
+      "ondurationchange": null,
+      "onemptied": null,
+      "onended": null,
+      "onerror": null,
+      "onfocus": null,
+      "onformdata": null,
+      "oninput": null,
+      "oninvalid": null,
+      "onkeydown": null,
+      "onkeypress": null,
+      "onkeyup": null,
+      "onload": null,
+      "onloadeddata": null,
+      "onloadedmetadata": null,
+      "onloadstart": null,
+      "onmousedown": null,
+      "onmouseenter": null,
+      "onmouseleave": null,
+      "onmousemove": null,
+      "onmouseout": null,
+      "onmouseover": null,
+      "onmouseup": null,
+      "onmousewheel": null,
+      "onpause": null,
+      "onplay": null,
+      "onplaying": null,
+      "onprogress": null,
+      "onratechange": null,
+      "onreset": null,
+      "onresize": null,
+      "onscroll": null,
+      "onscrollend": null,
+      "onsecuritypolicyviolation": null,
+      "onseeked": null,
+      "onseeking": null,
+      "onselect": null,
+      "onslotchange": null,
+      "onstalled": null,
+      "onsubmit": null,
+      "onsuspend": null,
+      "ontimeupdate": null,
+      "ontoggle": null,
+      "onvolumechange": null,
+      "onwaiting": null,
+      "onwebkitanimationend": null,
+      "onwebkitanimationiteration": null,
+      "onwebkitanimationstart": null,
+      "onwebkittransitionend": null,
+      "onwheel": null,
+      "onauxclick": null,
+      "ongotpointercapture": null,
+      "onlostpointercapture": null,
+      "onpointerdown": null,
+      "onpointermove": null,
+      "onpointerup": null,
+      "onpointercancel": null,
+      "onpointerover": null,
+      "onpointerout": null,
+      "onpointerenter": null,
+      "onpointerleave": null,
+      "onselectstart": null,
+      "onselectionchange": null,
+      "onanimationcancel": null,
+      "onanimationend": null,
+      "onanimationiteration": null,
+      "onanimationstart": null,
+      "ontransitionrun": null,
+      "ontransitionstart": null,
+      "ontransitionend": null,
+      "ontransitioncancel": null,
+      "onbeforexrselect": null,
+      "oncopy": null,
+      "oncut": null,
+      "onpaste": null,
+      "dataset": {
+        "$id": 7,
+        "$kind": "[object DOMStringMap]",
+        "properties": {
+          "constructor": {
+            "$kind": "Function",
+            "name": "DOMStringMap",
+            "length": 0
+          }
+        }
+      },
+      "nonce": "",
+      "autofocus": false,
+      "tabIndex": -1,
+      "style": {
+        "$id": 8,
+        "$kind": "[object CSSStyleDeclaration]",
+        "properties": {
+          "accentColor": "",
+          "additiveSymbols": "",
+          "alignContent": "",
+          "alignItems": "",
+          "alignSelf": "",
+          "alignmentBaseline": "",
+          "all": "",
+          "anchorName": "",
+          "anchorScope": "",
+          "animation": "",
+          "animationComposition": "",
+          "animationDelay": "",
+          "animationDirection": "",
+          "animationDuration": "",
+          "animationFillMode": "",
+          "animationIterationCount": "",
+          "animationName": "",
+          "animationPlayState": "",
+          "animationRange": "",
+          "animationRangeEnd": "",
+          "animationRangeStart": "",
+          "animationTimeline": "",
+          "animationTimingFunction": "",
+          "animationTrigger": "",
+          "appRegion": "",
+          "appearance": "",
+          "ascentOverride": "",
+          "aspectRatio": "",
+          "backdropFilter": "",
+          "backfaceVisibility": "",
+          "background": "",
+          "backgroundAttachment": "",
+          "backgroundBlendMode": "",
+          "backgroundClip": "",
+          "backgroundColor": "",
+          "backgroundImage": "",
+          "backgroundOrigin": "",
+          "backgroundPosition": "",
+          "backgroundPositionX": "",
+          "backgroundPositionY": "",
+          "backgroundRepeat": "",
+          "backgroundSize": "",
+          "basePalette": "",
+          "baselineShift": "",
+          "baselineSource": "",
+          "blockSize": "",
+          "border": "",
+          "borderBlock": "",
+          "borderBlockColor": "",
+          "borderBlockEnd": "",
+          "borderBlockEndColor": "",
+          "borderBlockEndStyle": "",
+          "borderBlockEndWidth": "",
+          "borderBlockStart": "",
+          "borderBlockStartColor": "",
+          "borderBlockStartStyle": "",
+          "borderBlockStartWidth": "",
+          "borderBlockStyle": "",
+          "borderBlockWidth": "",
+          "borderBottom": "",
+          "borderBottomColor": "",
+          "borderBottomLeftRadius": "",
+          "borderBottomRightRadius": "",
+          "borderBottomStyle": "",
+          "borderBottomWidth": "",
+          "borderCollapse": "",
+          "borderColor": "",
+          "borderEndEndRadius": "",
+          "borderEndStartRadius": "",
+          "borderImage": "",
+          "borderImageOutset": "",
+          "borderImageRepeat": "",
+          "borderImageSlice": "",
+          "borderImageSource": "",
+          "borderImageWidth": "",
+          "borderInline": "",
+          "borderInlineColor": "",
+          "borderInlineEnd": "",
+          "borderInlineEndColor": "",
+          "borderInlineEndStyle": "",
+          "borderInlineEndWidth": "",
+          "borderInlineStart": "",
+          "borderInlineStartColor": "",
+          "borderInlineStartStyle": "",
+          "borderInlineStartWidth": "",
+          "borderInlineStyle": "",
+          "borderInlineWidth": "",
+          "borderLeft": "",
+          "borderLeftColor": "",
+          "borderLeftStyle": "",
+          "borderLeftWidth": "",
+          "borderRadius": "",
+          "borderRight": "",
+          "borderRightColor": "",
+          "borderRightStyle": "",
+          "borderRightWidth": "",
+          "borderShape": "",
+          "borderSpacing": "",
+          "borderStartEndRadius": "",
+          "borderStartStartRadius": "",
+          "borderStyle": "",
+          "borderTop": "",
+          "borderTopColor": "",
+          "borderTopLeftRadius": "",
+          "borderTopRightRadius": "",
+          "borderTopStyle": "",
+          "borderTopWidth": "",
+          "borderWidth": "",
+          "bottom": "",
+          "boxDecorationBreak": "",
+          "boxShadow": "",
+          "boxSizing": "",
+          "breakAfter": "",
+          "breakBefore": "",
+          "breakInside": "",
+          "bufferedRendering": "",
+          "captionSide": "",
+          "caretAnimation": "",
+          "caretColor": "",
+          "caretShape": "",
+          "clear": "",
+          "clip": "",
+          "clipPath": "",
+          "clipRule": "",
+          "color": "",
+          "colorInterpolation": "",
+          "colorInterpolationFilters": "",
+          "colorRendering": "",
+          "colorScheme": "",
+          "columnCount": "",
+          "columnFill": "",
+          "columnGap": "",
+          "columnHeight": "",
+          "columnRule": "",
+          "columnRuleBreak": "",
+          "columnRuleColor": "",
+          "columnRuleInset": "",
+          "columnRuleInsetCap": "",
+          "columnRuleInsetCapEnd": "",
+          "columnRuleInsetCapStart": "",
+          "columnRuleInsetEnd": "",
+          "columnRuleInsetJunction": "",
+          "columnRuleInsetJunctionEnd": "",
+          "columnRuleInsetJunctionStart": "",
+          "columnRuleInsetStart": "",
+          "columnRuleStyle": "",
+          "columnRuleVisibilityItems": "",
+          "columnRuleWidth": "",
+          "columnSpan": "",
+          "columnWidth": "",
+          "columnWrap": "",
+          "columns": "",
+          "contain": "",
+          "containIntrinsicBlockSize": "",
+          "containIntrinsicHeight": "",
+          "containIntrinsicInlineSize": "",
+          "containIntrinsicSize": "",
+          "containIntrinsicWidth": "",
+          "container": "",
+          "containerName": "",
+          "containerType": "",
+          "content": "",
+          "contentVisibility": "",
+          "cornerBlockEndShape": "",
+          "cornerBlockStartShape": "",
+          "cornerBottomLeftShape": "",
+          "cornerBottomRightShape": "",
+          "cornerBottomShape": "",
+          "cornerEndEndShape": "",
+          "cornerEndStartShape": "",
+          "cornerInlineEndShape": "",
+          "cornerInlineStartShape": "",
+          "cornerLeftShape": "",
+          "cornerRightShape": "",
+          "cornerShape": "",
+          "cornerStartEndShape": "",
+          "cornerStartStartShape": "",
+          "cornerTopLeftShape": "",
+          "cornerTopRightShape": "",
+          "cornerTopShape": "",
+          "counterIncrement": "",
+          "counterReset": "",
+          "counterSet": "",
+          "cursor": "",
+          "cx": "",
+          "cy": "",
+          "d": "",
+          "descentOverride": "",
+          "direction": "",
+          "display": "",
+          "dominantBaseline": "",
+          "dynamicRangeLimit": "",
+          "emptyCells": "",
+          "fallback": "",
+          "fieldSizing": "",
+          "fill": "",
+          "fillOpacity": "",
+          "fillRule": "",
+          "filter": "",
+          "flex": "",
+          "flexBasis": "",
+          "flexDirection": "",
+          "flexFlow": "",
+          "flexGrow": "",
+          "flexLineCount": "",
+          "flexShrink": "",
+          "flexWrap": "",
+          "float": "",
+          "floodColor": "",
+          "floodOpacity": "",
+          "font": "",
+          "fontDisplay": "",
+          "fontFamily": "",
+          "fontFeatureSettings": "",
+          "fontKerning": "",
+          "fontLanguageOverride": "",
+          "fontOpticalSizing": "",
+          "fontPalette": "",
+          "fontSize": "",
+          "fontSizeAdjust": "",
+          "fontStretch": "",
+          "fontStyle": "",
+          "fontSynthesis": "",
+          "fontSynthesisSmallCaps": "",
+          "fontSynthesisStyle": "",
+          "fontSynthesisWeight": "",
+          "fontVariant": "",
+          "fontVariantAlternates": "",
+          "fontVariantCaps": "",
+          "fontVariantEastAsian": "",
+          "fontVariantEmoji": "",
+          "fontVariantLigatures": "",
+          "fontVariantNumeric": "",
+          "fontVariantPosition": "",
+          "fontVariationSettings": "",
+          "fontWeight": "",
+          "forcedColorAdjust": "",
+          "gap": "",
+          "grid": "",
+          "gridArea": "",
+          "gridAutoColumns": "",
+          "gridAutoFlow": "",
+          "gridAutoRows": "",
+          "gridColumn": "",
+          "gridColumnEnd": "",
+          "gridColumnGap": "",
+          "gridColumnStart": "",
+          "gridGap": "",
+          "gridRow": "",
+          "gridRowEnd": "",
+          "gridRowGap": "",
+          "gridRowStart": "",
+          "gridTemplate": "",
+          "gridTemplateAreas": "",
+          "gridTemplateColumns": "",
+          "gridTemplateRows": "",
+          "height": "",
+          "hyphenateCharacter": "",
+          "hyphenateLimitChars": "",
+          "hyphens": "",
+          "imageOrientation": "",
+          "imageRendering": "",
+          "inherits": "",
+          "initialLetter": "",
+          "initialValue": "",
+          "inlineSize": "",
+          "inset": "",
+          "insetBlock": "",
+          "insetBlockEnd": "",
+          "insetBlockStart": "",
+          "insetInline": "",
+          "insetInlineEnd": "",
+          "insetInlineStart": "",
+          "interactivity": "",
+          "interestDelay": "",
+          "interestDelayEnd": "",
+          "interestDelayStart": "",
+          "interpolateSize": "",
+          "isolation": "",
+          "justifyContent": "",
+          "justifyItems": "",
+          "justifySelf": "",
+          "left": "",
+          "letterSpacing": "",
+          "lightingColor": "",
+          "lineBreak": "",
+          "lineGapOverride": "",
+          "lineHeight": "",
+          "listStyle": "",
+          "listStyleImage": "",
+          "listStylePosition": "",
+          "listStyleType": "",
+          "margin": "",
+          "marginBlock": "",
+          "marginBlockEnd": "",
+          "marginBlockStart": "",
+          "marginBottom": "",
+          "marginInline": "",
+          "marginInlineEnd": "",
+          "marginInlineStart": "",
+          "marginLeft": "",
+          "marginRight": "",
+          "marginTop": "",
+          "marker": "",
+          "markerEnd": "",
+          "markerMid": "",
+          "markerStart": "",
+          "mask": "",
+          "maskClip": "",
+          "maskComposite": "",
+          "maskImage": "",
+          "maskMode": "",
+          "maskOrigin": "",
+          "maskPosition": "",
+          "maskRepeat": "",
+          "maskSize": "",
+          "maskType": "",
+          "mathDepth": "",
+          "mathShift": "",
+          "mathStyle": "",
+          "maxBlockSize": "",
+          "maxHeight": "",
+          "maxInlineSize": "",
+          "maxWidth": "",
+          "minBlockSize": "",
+          "minHeight": "",
+          "minInlineSize": "",
+          "minWidth": "",
+          "mixBlendMode": "",
+          "navigation": "",
+          "negative": "",
+          "objectFit": "",
+          "objectPosition": "",
+          "objectViewBox": "",
+          "offset": "",
+          "offsetAnchor": "",
+          "offsetDistance": "",
+          "offsetPath": "",
+          "offsetPosition": "",
+          "offsetRotate": "",
+          "opacity": "",
+          "order": "",
+          "orphans": "",
+          "outline": "",
+          "outlineColor": "",
+          "outlineOffset": "",
+          "outlineStyle": "",
+          "outlineWidth": "",
+          "overflow": "",
+          "overflowAnchor": "",
+          "overflowBlock": "",
+          "overflowClipMargin": "",
+          "overflowInline": "",
+          "overflowWrap": "",
+          "overflowX": "",
+          "overflowY": "",
+          "overlay": "",
+          "overrideColors": "",
+          "overscrollBehavior": "",
+          "overscrollBehaviorBlock": "",
+          "overscrollBehaviorInline": "",
+          "overscrollBehaviorX": "",
+          "overscrollBehaviorY": "",
+          "pad": "",
+          "padding": "",
+          "paddingBlock": "",
+          "paddingBlockEnd": "",
+          "paddingBlockStart": "",
+          "paddingBottom": "",
+          "paddingInline": "",
+          "paddingInlineEnd": "",
+          "paddingInlineStart": "",
+          "paddingLeft": "",
+          "paddingRight": "",
+          "paddingTop": "",
+          "page": "",
+          "pageBreakAfter": "",
+          "pageBreakBefore": "",
+          "pageBreakInside": "",
+          "pageMarginSafety": "",
+          "pageOrientation": "",
+          "paintOrder": "",
+          "perspective": "",
+          "perspectiveOrigin": "",
+          "placeContent": "",
+          "placeItems": "",
+          "placeSelf": "",
+          "pointerEvents": "",
+          "position": "",
+          "positionAnchor": "",
+          "positionArea": "",
+          "positionTry": "",
+          "positionTryFallbacks": "",
+          "positionTryOrder": "",
+          "positionVisibility": "",
+          "prefix": "",
+          "printColorAdjust": "",
+          "quotes": "",
+          "r": "",
+          "range": "",
+          "readingFlow": "",
+          "readingOrder": "",
+          "resize": "",
+          "result": "",
+          "right": "",
+          "rotate": "",
+          "rowGap": "",
+          "rowRule": "",
+          "rowRuleBreak": "",
+          "rowRuleColor": "",
+          "rowRuleInset": "",
+          "rowRuleInsetCap": "",
+          "rowRuleInsetCapEnd": "",
+          "rowRuleInsetCapStart": "",
+          "rowRuleInsetEnd": "",
+          "rowRuleInsetJunction": "",
+          "rowRuleInsetJunctionEnd": "",
+          "rowRuleInsetJunctionStart": "",
+          "rowRuleInsetStart": "",
+          "rowRuleStyle": "",
+          "rowRuleVisibilityItems": "",
+          "rowRuleWidth": "",
+          "rubyAlign": "",
+          "rubyOverhang": "",
+          "rubyPosition": "",
+          "rule": "",
+          "ruleBreak": "",
+          "ruleColor": "",
+          "ruleInset": "",
+          "ruleInsetCap": "",
+          "ruleInsetEnd": "",
+          "ruleInsetJunction": "",
+          "ruleInsetStart": "",
+          "ruleOverlap": "",
+          "ruleStyle": "",
+          "ruleVisibilityItems": "",
+          "ruleWidth": "",
+          "rx": "",
+          "ry": "",
+          "scale": "",
+          "scrollBehavior": "",
+          "scrollInitialTarget": "",
+          "scrollMargin": "",
+          "scrollMarginBlock": "",
+          "scrollMarginBlockEnd": "",
+          "scrollMarginBlockStart": "",
+          "scrollMarginBottom": "",
+          "scrollMarginInline": "",
+          "scrollMarginInlineEnd": "",
+          "scrollMarginInlineStart": "",
+          "scrollMarginLeft": "",
+          "scrollMarginRight": "",
+          "scrollMarginTop": "",
+          "scrollMarkerGroup": "",
+          "scrollPadding": "",
+          "scrollPaddingBlock": "",
+          "scrollPaddingBlockEnd": "",
+          "scrollPaddingBlockStart": "",
+          "scrollPaddingBottom": "",
+          "scrollPaddingInline": "",
+          "scrollPaddingInlineEnd": "",
+          "scrollPaddingInlineStart": "",
+          "scrollPaddingLeft": "",
+          "scrollPaddingRight": "",
+          "scrollPaddingTop": "",
+          "scrollSnapAlign": "",
+          "scrollSnapStop": "",
+          "scrollSnapType": "",
+          "scrollTargetGroup": "",
+          "scrollTimeline": "",
+          "scrollTimelineAxis": "",
+          "scrollTimelineName": "",
+          "scrollbarColor": "",
+          "scrollbarGutter": "",
+          "scrollbarWidth": "",
+          "shapeImageThreshold": "",
+          "shapeMargin": "",
+          "shapeOutside": "",
+          "shapeRendering": "",
+          "size": "",
+          "sizeAdjust": "",
+          "speak": "",
+          "speakAs": "",
+          "src": "",
+          "stopColor": "",
+          "stopOpacity": "",
+          "stroke": "",
+          "strokeDasharray": "",
+          "strokeDashoffset": "",
+          "strokeLinecap": "",
+          "strokeLinejoin": "",
+          "strokeMiterlimit": "",
+          "strokeOpacity": "",
+          "strokeWidth": "",
+          "suffix": "",
+          "symbols": "",
+          "syntax": "",
+          "system": "",
+          "tabSize": "",
+          "tableLayout": "",
+          "textAlign": "",
+          "textAlignLast": "",
+          "textAnchor": "",
+          "textAutospace": "",
+          "textBox": "",
+          "textBoxEdge": "",
+          "textBoxTrim": "",
+          "textCombineUpright": "",
+          "textDecoration": "",
+          "textDecorationColor": "",
+          "textDecorationLine": "",
+          "textDecorationSkipInk": "",
+          "textDecorationStyle": "",
+          "textDecorationThickness": "",
+          "textEmphasis": "",
+          "textEmphasisColor": "",
+          "textEmphasisPosition": "",
+          "textEmphasisStyle": "",
+          "textFit": "",
+          "textIndent": "",
+          "textJustify": "",
+          "textOrientation": "",
+          "textOverflow": "",
+          "textRendering": "",
+          "textShadow": "",
+          "textSizeAdjust": "",
+          "textSpacingTrim": "",
+          "textTransform": "",
+          "textUnderlineOffset": "",
+          "textUnderlinePosition": "",
+          "textWrap": "",
+          "textWrapMode": "",
+          "textWrapStyle": "",
+          "timelineScope": "",
+          "timelineTrigger": "",
+          "timelineTriggerActivationRange": "",
+          "timelineTriggerActivationRangeEnd": "",
+          "timelineTriggerActivationRangeStart": "",
+          "timelineTriggerActiveRange": "",
+          "timelineTriggerActiveRangeEnd": "",
+          "timelineTriggerActiveRangeStart": "",
+          "timelineTriggerName": "",
+          "timelineTriggerSource": "",
+          "top": "",
+          "touchAction": "",
+          "transform": "",
+          "transformBox": "",
+          "transformOrigin": "",
+          "transformStyle": "",
+          "transition": "",
+          "transitionBehavior": "",
+          "transitionDelay": "",
+          "transitionDuration": "",
+          "transitionProperty": "",
+          "transitionTimingFunction": "",
+          "translate": "",
+          "triggerScope": "",
+          "types": "",
+          "unicodeBidi": "",
+          "unicodeRange": "",
+          "userSelect": "",
+          "vectorEffect": "",
+          "verticalAlign": "",
+          "viewTimeline": "",
+          "viewTimelineAxis": "",
+          "viewTimelineInset": "",
+          "viewTimelineName": "",
+          "viewTransitionClass": "",
+          "viewTransitionGroup": "",
+          "viewTransitionName": "",
+          "viewTransitionScope": "",
+          "visibility": "",
+          "webkitAlignContent": "",
+          "webkitAlignItems": "",
+          "webkitAlignSelf": "",
+          "webkitAnimation": "",
+          "webkitAnimationDelay": "",
+          "webkitAnimationDirection": "",
+          "webkitAnimationDuration": "",
+          "webkitAnimationFillMode": "",
+          "webkitAnimationIterationCount": "",
+          "webkitAnimationName": "",
+          "webkitAnimationPlayState": "",
+          "webkitAnimationTimingFunction": "",
+          "webkitAppRegion": "",
+          "webkitAppearance": "",
+          "webkitBackfaceVisibility": "",
+          "webkitBackgroundClip": "",
+          "webkitBackgroundOrigin": "",
+          "webkitBackgroundSize": "",
+          "webkitBorderAfter": "",
+          "webkitBorderAfterColor": "",
+          "webkitBorderAfterStyle": "",
+          "webkitBorderAfterWidth": "",
+          "webkitBorderBefore": "",
+          "webkitBorderBeforeColor": "",
+          "webkitBorderBeforeStyle": "",
+          "webkitBorderBeforeWidth": "",
+          "webkitBorderBottomLeftRadius": "",
+          "webkitBorderBottomRightRadius": "",
+          "webkitBorderEnd": "",
+          "webkitBorderEndColor": "",
+          "webkitBorderEndStyle": "",
+          "webkitBorderEndWidth": "",
+          "webkitBorderHorizontalSpacing": "",
+          "webkitBorderImage": "",
+          "webkitBorderRadius": "",
+          "webkitBorderStart": "",
+          "webkitBorderStartColor": "",
+          "webkitBorderStartStyle": "",
+          "webkitBorderStartWidth": "",
+          "webkitBorderTopLeftRadius": "",
+          "webkitBorderTopRightRadius": "",
+          "webkitBorderVerticalSpacing": "",
+          "webkitBoxAlign": "",
+          "webkitBoxDecorationBreak": "",
+          "webkitBoxDirection": "",
+          "webkitBoxFlex": "",
+          "webkitBoxOrdinalGroup": "",
+          "webkitBoxOrient": "",
+          "webkitBoxPack": "",
+          "webkitBoxReflect": "",
+          "webkitBoxShadow": "",
+          "webkitBoxSizing": "",
+          "webkitClipPath": "",
+          "webkitColumnBreakAfter": "",
+          "webkitColumnBreakBefore": "",
+          "webkitColumnBreakInside": "",
+          "webkitColumnCount": "",
+          "webkitColumnGap": "",
+          "webkitColumnRule": "",
+          "webkitColumnRuleColor": "",
+          "webkitColumnRuleStyle": "",
+          "webkitColumnRuleWidth": "",
+          "webkitColumnSpan": "",
+          "webkitColumnWidth": "",
+          "webkitColumns": "",
+          "webkitFilter": "",
+          "webkitFlex": "",
+          "webkitFlexBasis": "",
+          "webkitFlexDirection": "",
+          "webkitFlexFlow": "",
+          "webkitFlexGrow": "",
+          "webkitFlexShrink": "",
+          "webkitFlexWrap": "",
+          "webkitFontFeatureSettings": "",
+          "webkitFontSmoothing": "",
+          "webkitHyphenateCharacter": "",
+          "webkitJustifyContent": "",
+          "webkitLineBreak": "",
+          "webkitLineClamp": "",
+          "webkitLocale": "",
+          "webkitLogicalHeight": "",
+          "webkitLogicalWidth": "",
+          "webkitMarginAfter": "",
+          "webkitMarginBefore": "",
+          "webkitMarginEnd": "",
+          "webkitMarginStart": "",
+          "webkitMask": "",
+          "webkitMaskBoxImage": "",
+          "webkitMaskBoxImageOutset": "",
+          "webkitMaskBoxImageRepeat": "",
+          "webkitMaskBoxImageSlice": "",
+          "webkitMaskBoxImageSource": "",
+          "webkitMaskBoxImageWidth": "",
+          "webkitMaskClip": "",
+          "webkitMaskComposite": "",
+          "webkitMaskImage": "",
+          "webkitMaskOrigin": "",
+          "webkitMaskPosition": "",
+          "webkitMaskPositionX": "",
+          "webkitMaskPositionY": "",
+          "webkitMaskRepeat": "",
+          "webkitMaskSize": "",
+          "webkitMaxLogicalHeight": "",
+          "webkitMaxLogicalWidth": "",
+          "webkitMinLogicalHeight": "",
+          "webkitMinLogicalWidth": "",
+          "webkitOpacity": "",
+          "webkitOrder": "",
+          "webkitPaddingAfter": "",
+          "webkitPaddingBefore": "",
+          "webkitPaddingEnd": "",
+          "webkitPaddingStart": "",
+          "webkitPerspective": "",
+          "webkitPerspectiveOrigin": "",
+          "webkitPerspectiveOriginX": "",
+          "webkitPerspectiveOriginY": "",
+          "webkitPrintColorAdjust": "",
+          "webkitRtlOrdering": "",
+          "webkitRubyPosition": "",
+          "webkitShapeImageThreshold": "",
+          "webkitShapeMargin": "",
+          "webkitShapeOutside": "",
+          "webkitTapHighlightColor": "",
+          "webkitTextCombine": "",
+          "webkitTextDecorationsInEffect": "",
+          "webkitTextEmphasis": "",
+          "webkitTextEmphasisColor": "",
+          "webkitTextEmphasisPosition": "",
+          "webkitTextEmphasisStyle": "",
+          "webkitTextFillColor": "",
+          "webkitTextOrientation": "",
+          "webkitTextSecurity": "",
+          "webkitTextSizeAdjust": "",
+          "webkitTextStroke": "",
+          "webkitTextStrokeColor": "",
+          "webkitTextStrokeWidth": "",
+          "webkitTransform": "",
+          "webkitTransformOrigin": "",
+          "webkitTransformOriginX": "",
+          "webkitTransformOriginY": "",
+          "webkitTransformOriginZ": "",
+          "webkitTransformStyle": "",
+          "webkitTransition": "",
+          "webkitTransitionDelay": "",
+          "webkitTransitionDuration": "",
+          "webkitTransitionProperty": "",
+          "webkitTransitionTimingFunction": "",
+          "webkitUserDrag": "",
+          "webkitUserModify": "",
+          "webkitUserSelect": "",
+          "webkitWritingMode": "",
+          "whiteSpace": "",
+          "whiteSpaceCollapse": "",
+          "widows": "",
+          "width": "",
+          "willChange": "",
+          "wordBreak": "",
+          "wordSpacing": "",
+          "wordWrap": "",
+          "writingMode": "",
+          "x": "",
+          "y": "",
+          "zIndex": "",
+          "zoom": "",
+          "cssText": "",
+          "length": 0,
+          "parentRule": null,
+          "cssFloat": "",
+          "getPropertyPriority": {
+            "$kind": "Function",
+            "name": "getPropertyPriority",
+            "length": 1
+          },
+          "getPropertyValue": {
+            "$kind": "Function",
+            "name": "getPropertyValue",
+            "length": 1
+          },
+          "item": {
+            "$kind": "Function",
+            "name": "item",
+            "length": 1
+          },
+          "removeProperty": {
+            "$kind": "Function",
+            "name": "removeProperty",
+            "length": 1
+          },
+          "setProperty": {
+            "$kind": "Function",
+            "name": "setProperty",
+            "length": 2
+          },
+          "constructor": {
+            "$kind": "Function",
+            "name": "CSSStyleDeclaration",
+            "length": 0
+          }
+        }
+      },
+      "attributeStyleMap": {
+        "$id": 9,
+        "$kind": "[object StylePropertyMap]",
+        "properties": {
+          "append": {
+            "$kind": "Function",
+            "name": "append",
+            "length": 1
+          },
+          "clear": {
+            "$kind": "Function",
+            "name": "clear",
+            "length": 0
+          },
+          "delete": {
+            "$kind": "Function",
+            "name": "delete",
+            "length": 1
+          },
+          "set": {
+            "$kind": "Function",
+            "name": "set",
+            "length": 1
+          },
+          "constructor": {
+            "$kind": "Function",
+            "name": "StylePropertyMap",
+            "length": 0
+          },
+          "size": 0,
+          "get": {
+            "$kind": "Function",
+            "name": "get",
+            "length": 1
+          },
+          "getAll": {
+            "$kind": "Function",
+            "name": "getAll",
+            "length": 1
+          },
+          "has": {
+            "$kind": "Function",
+            "name": "has",
+            "length": 1
+          },
+          "entries": {
+            "$kind": "Function",
+            "name": "entries",
+            "length": 0
+          },
+          "forEach": {
+            "$kind": "Function",
+            "name": "forEach",
+            "length": 1
+          },
+          "keys": {
+            "$kind": "Function",
+            "name": "keys",
+            "length": 0
+          },
+          "values": {
+            "$kind": "Function",
+            "name": "values",
+            "length": 0
+          }
+        }
+      },
+      "attachInternals": {
+        "$kind": "Function",
+        "name": "attachInternals",
+        "length": 0
+      },
+      "blur": {
+        "$kind": "Function",
+        "name": "blur",
+        "length": 0
+      },
+      "click": {
+        "$kind": "Function",
+        "name": "click",
+        "length": 0
+      },
+      "focus": {
+        "$kind": "Function",
+        "name": "focus",
+        "length": 0
+      },
+      "hidePopover": {
+        "$kind": "Function",
+        "name": "hidePopover",
+        "length": 0
+      },
+      "showPopover": {
+        "$kind": "Function",
+        "name": "showPopover",
+        "length": 0
+      },
+      "togglePopover": {
+        "$kind": "Function",
+        "name": "togglePopover",
+        "length": 0
+      },
+      "onscrollsnapchange": null,
+      "onscrollsnapchanging": null,
+      "focusGroup": {
+        "$id": 10,
+        "$kind": "[object DOMTokenList]",
+        "properties": {
+          "entries": {
+            "$kind": "Function",
+            "name": "entries",
+            "length": 0
+          },
+          "keys": {
+            "$kind": "Function",
+            "name": "keys",
+            "length": 0
+          },
+          "values": {
+            "$kind": "Function",
+            "name": "values",
+            "length": 0
+          },
+          "forEach": {
+            "$kind": "Function",
+            "name": "forEach",
+            "length": 1
+          },
+          "length": 0,
+          "value": "",
+          "add": {
+            "$kind": "Function",
+            "name": "add",
+            "length": 0
+          },
+          "contains": {
+            "$kind": "Function",
+            "name": "contains",
+            "length": 1
+          },
+          "item": {
+            "$kind": "Function",
+            "name": "item",
+            "length": 1
+          },
+          "remove": {
+            "$kind": "Function",
+            "name": "remove",
+            "length": 0
+          },
+          "replace": {
+            "$kind": "Function",
+            "name": "replace",
+            "length": 2
+          },
+          "supports": {
+            "$kind": "Function",
+            "name": "supports",
+            "length": 1
+          },
+          "toggle": {
+            "$kind": "Function",
+            "name": "toggle",
+            "length": 1
+          },
+          "toString": {
+            "$kind": "Function",
+            "name": "toString",
+            "length": 0
+          },
+          "constructor": {
+            "$kind": "Function",
+            "name": "DOMTokenList",
+            "length": 0
+          }
+        }
+      },
+      "focusGroupStart": false,
+      "onpointerrawupdate": null,
+      "insertBefore": {
+        "$kind": "Function",
+        "name": "anonymous",
+        "length": 2
+      },
+      "appendChild": {
+        "$kind": "Function",
+        "name": "anonymous",
+        "length": 2
+      },
+      "namespaceURI": "http://www.w3.org/1999/xhtml",
+      "prefix": null,
+      "localName": "script",
+      "tagName": "SCRIPT",
+      "id": "",
+      "className": "",
+      "classList": {
+        "$id": 11,
+        "$kind": "[object DOMTokenList]",
+        "properties": {
+          "entries": {
+            "$kind": "Function",
+            "name": "entries",
+            "length": 0
+          },
+          "keys": {
+            "$kind": "Function",
+            "name": "keys",
+            "length": 0
+          },
+          "values": {
+            "$kind": "Function",
+            "name": "values",
+            "length": 0
+          },
+          "forEach": {
+            "$kind": "Function",
+            "name": "forEach",
+            "length": 1
+          },
+          "length": 0,
+          "value": "",
+          "add": {
+            "$kind": "Function",
+            "name": "add",
+            "length": 0
+          },
+          "contains": {
+            "$kind": "Function",
+            "name": "contains",
+            "length": 1
+          },
+          "item": {
+            "$kind": "Function",
+            "name": "item",
+            "length": 1
+          },
+          "remove": {
+            "$kind": "Function",
+            "name": "remove",
+            "length": 0
+          },
+          "replace": {
+            "$kind": "Function",
+            "name": "replace",
+            "length": 2
+          },
+          "supports": {
+            "$kind": "Function",
+            "name": "supports",
+            "length": 1
+          },
+          "toggle": {
+            "$kind": "Function",
+            "name": "toggle",
+            "length": 1
+          },
+          "toString": {
+            "$kind": "Function",
+            "name": "toString",
+            "length": 0
+          },
+          "constructor": {
+            "$kind": "Function",
+            "name": "DOMTokenList",
+            "length": 0
+          }
+        }
+      },
+      "slot": "",
+      "attributes": {
+        "$id": 12,
+        "$kind": "[object NamedNodeMap]",
+        "properties": {
+          "0": {
+            "$id": 13,
+            "$kind": "[object Attr]",
+            "nodeType": 2,
+            "nodeName": "src"
+          },
+          "src": {
+            "$ref": 13
+          },
+          "length": 1,
+          "getNamedItem": {
+            "$kind": "Function",
+            "name": "getNamedItem",
+            "length": 1
+          },
+          "getNamedItemNS": {
+            "$kind": "Function",
+            "name": "getNamedItemNS",
+            "length": 2
+          },
+          "item": {
+            "$kind": "Function",
+            "name": "item",
+            "length": 1
+          },
+          "removeNamedItem": {
+            "$kind": "Function",
+            "name": "removeNamedItem",
+            "length": 1
+          },
+          "removeNamedItemNS": {
+            "$kind": "Function",
+            "name": "removeNamedItemNS",
+            "length": 2
+          },
+          "setNamedItem": {
+            "$kind": "Function",
+            "name": "setNamedItem",
+            "length": 1
+          },
+          "setNamedItemNS": {
+            "$kind": "Function",
+            "name": "setNamedItemNS",
+            "length": 1
+          },
+          "constructor": {
+            "$kind": "Function",
+            "name": "NamedNodeMap",
+            "length": 0
+          }
+        }
+      },
+      "shadowRoot": null,
+      "part": {
+        "$id": 14,
+        "$kind": "[object DOMTokenList]",
+        "properties": {
+          "entries": {
+            "$kind": "Function",
+            "name": "entries",
+            "length": 0
+          },
+          "keys": {
+            "$kind": "Function",
+            "name": "keys",
+            "length": 0
+          },
+          "values": {
+            "$kind": "Function",
+            "name": "values",
+            "length": 0
+          },
+          "forEach": {
+            "$kind": "Function",
+            "name": "forEach",
+            "length": 1
+          },
+          "length": 0,
+          "value": "",
+          "add": {
+            "$kind": "Function",
+            "name": "add",
+            "length": 0
+          },
+          "contains": {
+            "$kind": "Function",
+            "name": "contains",
+            "length": 1
+          },
+          "item": {
+            "$kind": "Function",
+            "name": "item",
+            "length": 1
+          },
+          "remove": {
+            "$kind": "Function",
+            "name": "remove",
+            "length": 0
+          },
+          "replace": {
+            "$kind": "Function",
+            "name": "replace",
+            "length": 2
+          },
+          "supports": {
+            "$kind": "Function",
+            "name": "supports",
+            "length": 1
+          },
+          "toggle": {
+            "$kind": "Function",
+            "name": "toggle",
+            "length": 1
+          },
+          "toString": {
+            "$kind": "Function",
+            "name": "toString",
+            "length": 0
+          },
+          "constructor": {
+            "$kind": "Function",
+            "name": "DOMTokenList",
+            "length": 0
+          }
+        }
+      },
+      "assignedSlot": null,
+      "innerHTML": "",
+      "outerHTML": "<script src=\"https://complexsearch.kugou.com/v2/search/song?callback=callback123&amp;srcappid=2919&amp;clientver=1000&amp;clienttime=1788003140105&amp;mid=b36c019bf55de6e1353531a57041fe50&amp;uuid=b36c019bf55de6e1353531a57041fe50&amp;dfid=4FL90z1KtMfa1Dmkch2Tny2Z&amp;keyword=%E6%9E%97%E4%BF%8A%E6%9D%B0&amp;page=1&amp;pagesize=30&amp;bitrate=0&amp;isfuzzy=0&amp;inputtype=0&amp;platform=WebFilter&amp;userid=0&amp;iscorrection=1&amp;privilege_filter=0&amp;filter=10&amp;token=&amp;appid=1014&amp;signature=18f055ff41d8aa86bd320e70305cb5b7\"></script>",
+      "scrollTop": 0,
+      "scrollLeft": 0,
+      "scrollWidth": 0,
+      "scrollHeight": 0,
+      "clientTop": 0,
+      "clientLeft": 0,
+      "clientWidth": 0,
+      "clientHeight": 0,
+      "onbeforecopy": null,
+      "onbeforecut": null,
+      "onbeforepaste": null,
+      "onsearch": null,
+      "elementTiming": "",
+      "onfullscreenchange": null,
+      "onfullscreenerror": null,
+      "onwebkitfullscreenchange": null,
+      "onwebkitfullscreenerror": null,
+      "activeViewTransition": null,
+      "role": null,
+      "ariaAtomic": null,
+      "ariaAutoComplete": null,
+      "ariaBusy": null,
+      "ariaBrailleLabel": null,
+      "ariaBrailleRoleDescription": null,
+      "ariaChecked": null,
+      "ariaColCount": null,
+      "ariaColIndex": null,
+      "ariaColSpan": null,
+      "ariaCurrent": null,
+      "ariaDescription": null,
+      "ariaDisabled": null,
+      "ariaExpanded": null,
+      "ariaHasPopup": null,
+      "ariaHidden": null,
+      "ariaInvalid": null,
+      "ariaKeyShortcuts": null,
+      "ariaLabel": null,
+      "ariaLevel": null,
+      "ariaLive": null,
+      "ariaModal": null,
+      "ariaMultiLine": null,
+      "ariaMultiSelectable": null,
+      "ariaOrientation": null,
+      "ariaPlaceholder": null,
+      "ariaPosInSet": null,
+      "ariaPressed": null,
+      "ariaReadOnly": null,
+      "ariaRelevant": null,
+      "ariaRequired": null,
+      "ariaRoleDescription": null,
+      "ariaRowCount": null,
+      "ariaRowIndex": null,
+      "ariaRowSpan": null,
+      "ariaSelected": null,
+      "ariaSetSize": null,
+      "ariaSort": null,
+      "ariaValueMax": null,
+      "ariaValueMin": null,
+      "ariaValueNow": null,
+      "ariaValueText": null,
+      "children": {
+        "$id": 15,
+        "$kind": "[object HTMLCollection]",
+        "properties": {
+          "length": 0,
+          "item": {
+            "$kind": "Function",
+            "name": "item",
+            "length": 1
+          },
+          "namedItem": {
+            "$kind": "Function",
+            "name": "namedItem",
+            "length": 1
+          },
+          "constructor": {
+            "$kind": "Function",
+            "name": "HTMLCollection",
+            "length": 0
+          }
+        }
+      },
+      "firstElementChild": null,
+      "lastElementChild": null,
+      "childElementCount": 0,
+      "previousElementSibling": null,
+      "nextElementSibling": null,
+      "after": {
+        "$kind": "Function",
+        "name": "after",
+        "length": 0
+      },
+      "animate": {
+        "$kind": "Function",
+        "name": "animate",
+        "length": 1
+      },
+      "append": {
+        "$kind": "Function",
+        "name": "append",
+        "length": 0
+      },
+      "attachShadow": {
+        "$kind": "Function",
+        "name": "attachShadow",
+        "length": 1
+      },
+      "before": {
+        "$kind": "Function",
+        "name": "before",
+        "length": 0
+      },
+      "checkVisibility": {
+        "$kind": "Function",
+        "name": "checkVisibility",
+        "length": 0
+      },
+      "closest": {
+        "$kind": "Function",
+        "name": "closest",
+        "length": 1
+      },
+      "computedStyleMap": {
+        "$kind": "Function",
+        "name": "computedStyleMap",
+        "length": 0
+      },
+      "getAnimations": {
+        "$kind": "Function",
+        "name": "getAnimations",
+        "length": 0
+      },
+      "getAttribute": {
+        "$kind": "Function",
+        "name": "getAttribute",
+        "length": 1
+      },
+      "getAttributeNS": {
+        "$kind": "Function",
+        "name": "getAttributeNS",
+        "length": 2
+      },
+      "getAttributeNames": {
+        "$kind": "Function",
+        "name": "getAttributeNames",
+        "length": 0
+      },
+      "getAttributeNode": {
+        "$kind": "Function",
+        "name": "getAttributeNode",
+        "length": 1
+      },
+      "getAttributeNodeNS": {
+        "$kind": "Function",
+        "name": "getAttributeNodeNS",
+        "length": 2
+      },
+      "getBoundingClientRect": {
+        "$kind": "Function",
+        "name": "getBoundingClientRect",
+        "length": 0
+      },
+      "getClientRects": {
+        "$kind": "Function",
+        "name": "getClientRects",
+        "length": 0
+      },
+      "getElementsByClassName": {
+        "$kind": "Function",
+        "name": "getElementsByClassName",
+        "length": 1
+      },
+      "getElementsByTagName": {
+        "$kind": "Function",
+        "name": "getElementsByTagName",
+        "length": 1
+      },
+      "getElementsByTagNameNS": {
+        "$kind": "Function",
+        "name": "getElementsByTagNameNS",
+        "length": 2
+      },
+      "getHTML": {
+        "$kind": "Function",
+        "name": "getHTML",
+        "length": 0
+      },
+      "hasAttribute": {
+        "$kind": "Function",
+        "name": "hasAttribute",
+        "length": 1
+      },
+      "hasAttributeNS": {
+        "$kind": "Function",
+        "name": "hasAttributeNS",
+        "length": 2
+      },
+      "hasAttributes": {
+        "$kind": "Function",
+        "name": "hasAttributes",
+        "length": 0
+      },
+      "hasPointerCapture": {
+        "$kind": "Function",
+        "name": "hasPointerCapture",
+        "length": 1
+      },
+      "insertAdjacentElement": {
+        "$kind": "Function",
+        "name": "insertAdjacentElement",
+        "length": 2
+      },
+      "insertAdjacentHTML": {
+        "$kind": "Function",
+        "name": "insertAdjacentHTML",
+        "length": 2
+      },
+      "insertAdjacentText": {
+        "$kind": "Function",
+        "name": "insertAdjacentText",
+        "length": 2
+      },
+      "matches": {
+        "$kind": "Function",
+        "name": "matches",
+        "length": 1
+      },
+      "moveBefore": {
+        "$kind": "Function",
+        "name": "moveBefore",
+        "length": 2
+      },
+      "prepend": {
+        "$kind": "Function",
+        "name": "prepend",
+        "length": 0
+      },
+      "querySelector": {
+        "$kind": "Function",
+        "name": "querySelector",
+        "length": 1
+      },
+      "querySelectorAll": {
+        "$kind": "Function",
+        "name": "querySelectorAll",
+        "length": 1
+      },
+      "releasePointerCapture": {
+        "$kind": "Function",
+        "name": "releasePointerCapture",
+        "length": 1
+      },
+      "remove": {
+        "$kind": "Function",
+        "name": "remove",
+        "length": 0
+      },
+      "removeAttribute": {
+        "$kind": "Function",
+        "name": "removeAttribute",
+        "length": 1
+      },
+      "removeAttributeNS": {
+        "$kind": "Function",
+        "name": "removeAttributeNS",
+        "length": 2
+      },
+      "removeAttributeNode": {
+        "$kind": "Function",
+        "name": "removeAttributeNode",
+        "length": 1
+      },
+      "replaceChildren": {
+        "$kind": "Function",
+        "name": "replaceChildren",
+        "length": 0
+      },
+      "replaceWith": {
+        "$kind": "Function",
+        "name": "replaceWith",
+        "length": 0
+      },
+      "requestFullscreen": {
+        "$kind": "Function",
+        "name": "requestFullscreen",
+        "length": 0
+      },
+      "requestPointerLock": {
+        "$kind": "Function",
+        "name": "requestPointerLock",
+        "length": 0
+      },
+      "scroll": {
+        "$kind": "Function",
+        "name": "scroll",
+        "length": 0
+      },
+      "scrollBy": {
+        "$kind": "Function",
+        "name": "scrollBy",
+        "length": 0
+      },
+      "scrollIntoView": {
+        "$kind": "Function",
+        "name": "scrollIntoView",
+        "length": 0
+      },
+      "scrollIntoViewIfNeeded": {
+        "$kind": "Function",
+        "name": "scrollIntoViewIfNeeded",
+        "length": 0
+      },
+      "scrollTo": {
+        "$kind": "Function",
+        "name": "scrollTo",
+        "length": 0
+      },
+      "setAttribute": {
+        "$kind": "Function",
+        "name": "setAttribute",
+        "length": 2
+      },
+      "setAttributeNS": {
+        "$kind": "Function",
+        "name": "setAttributeNS",
+        "length": 3
+      },
+      "setAttributeNode": {
+        "$kind": "Function",
+        "name": "setAttributeNode",
+        "length": 1
+      },
+      "setAttributeNodeNS": {
+        "$kind": "Function",
+        "name": "setAttributeNodeNS",
+        "length": 1
+      },
+      "setHTMLUnsafe": {
+        "$kind": "Function",
+        "name": "setHTMLUnsafe",
+        "length": 1
+      },
+      "setPointerCapture": {
+        "$kind": "Function",
+        "name": "setPointerCapture",
+        "length": 1
+      },
+      "startViewTransition": {
+        "$kind": "Function",
+        "name": "startViewTransition",
+        "length": 0
+      },
+      "toggleAttribute": {
+        "$kind": "Function",
+        "name": "toggleAttribute",
+        "length": 1
+      },
+      "webkitMatchesSelector": {
+        "$kind": "Function",
+        "name": "webkitMatchesSelector",
+        "length": 1
+      },
+      "webkitRequestFullScreen": {
+        "$kind": "Function",
+        "name": "webkitRequestFullScreen",
+        "length": 0
+      },
+      "webkitRequestFullscreen": {
+        "$kind": "Function",
+        "name": "webkitRequestFullscreen",
+        "length": 0
+      },
+      "currentCSSZoom": 1,
+      "customElementRegistry": {
+        "$id": 16,
+        "$kind": "[object CustomElementRegistry]",
+        "properties": {
+          "define": {
+            "$kind": "Function",
+            "name": "define",
+            "length": 2
+          },
+          "get": {
+            "$kind": "Function",
+            "name": "get",
+            "length": 1
+          },
+          "getName": {
+            "$kind": "Function",
+            "name": "getName",
+            "length": 1
+          },
+          "upgrade": {
+            "$kind": "Function",
+            "name": "upgrade",
+            "length": 1
+          },
+          "whenDefined": {
+            "$kind": "Function",
+            "name": "whenDefined",
+            "length": 1
+          },
+          "initialize": {
+            "$kind": "Function",
+            "name": "initialize",
+            "length": 1
+          },
+          "constructor": {
+            "$kind": "Function",
+            "name": "CustomElementRegistry",
+            "length": 0
+          }
+        }
+      },
+      "ariaColIndexText": null,
+      "ariaRowIndexText": null,
+      "ariaActionsElements": null,
+      "ariaActiveDescendantElement": null,
+      "ariaControlsElements": null,
+      "ariaDescribedByElements": null,
+      "ariaDetailsElements": null,
+      "ariaErrorMessageElements": null,
+      "ariaFlowToElements": null,
+      "ariaLabelledByElements": null,
+      "ariaNotify": {
+        "$kind": "Function",
+        "name": "ariaNotify",
+        "length": 1
+      },
+      "pseudo": {
+        "$kind": "Function",
+        "name": "pseudo",
+        "length": 1
+      },
+      "setHTML": {
+        "$kind": "Function",
+        "name": "setHTML",
+        "length": 1
+      },
+      "nodeType": 1,
+      "nodeName": "SCRIPT",
+      "baseURI": "https://www.kugou.com/yy/html/search.html#searchType=song&searchKeyWord=%E6%9E%97%E4%BF%8A%E6%9D%B0",
+      "isConnected": false,
+      "ownerDocument": {
+        "$id": 17,
+        "$kind": "[object HTMLDocument]",
+        "nodeType": 9,
+        "nodeName": "#document"
+      },
+      "parentNode": null,
+      "parentElement": null,
+      "childNodes": {
+        "$id": 18,
+        "$kind": "[object NodeList]",
+        "properties": {
+          "entries": {
+            "$kind": "Function",
+            "name": "entries",
+            "length": 0
+          },
+          "keys": {
+            "$kind": "Function",
+            "name": "keys",
+            "length": 0
+          },
+          "values": {
+            "$kind": "Function",
+            "name": "values",
+            "length": 0
+          },
+          "forEach": {
+            "$kind": "Function",
+            "name": "forEach",
+            "length": 1
+          },
+          "length": 0,
+          "item": {
+            "$kind": "Function",
+            "name": "item",
+            "length": 1
+          },
+          "constructor": {
+            "$kind": "Function",
+            "name": "NodeList",
+            "length": 0
+          }
+        }
+      },
+      "firstChild": null,
+      "lastChild": null,
+      "previousSibling": null,
+      "nextSibling": null,
+      "nodeValue": null,
+      "ELEMENT_NODE": 1,
+      "ATTRIBUTE_NODE": 2,
+      "TEXT_NODE": 3,
+      "CDATA_SECTION_NODE": 4,
+      "ENTITY_REFERENCE_NODE": 5,
+      "ENTITY_NODE": 6,
+      "PROCESSING_INSTRUCTION_NODE": 7,
+      "COMMENT_NODE": 8,
+      "DOCUMENT_NODE": 9,
+      "DOCUMENT_TYPE_NODE": 10,
+      "DOCUMENT_FRAGMENT_NODE": 11,
+      "NOTATION_NODE": 12,
+      "DOCUMENT_POSITION_DISCONNECTED": 1,
+      "DOCUMENT_POSITION_PRECEDING": 2,
+      "DOCUMENT_POSITION_FOLLOWING": 4,
+      "DOCUMENT_POSITION_CONTAINS": 8,
+      "DOCUMENT_POSITION_CONTAINED_BY": 16,
+      "DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC": 32,
+      "cloneNode": {
+        "$kind": "Function",
+        "name": "cloneNode",
+        "length": 0
+      },
+      "compareDocumentPosition": {
+        "$kind": "Function",
+        "name": "compareDocumentPosition",
+        "length": 1
+      },
+      "contains": {
+        "$kind": "Function",
+        "name": "contains",
+        "length": 1
+      },
+      "getRootNode": {
+        "$kind": "Function",
+        "name": "getRootNode",
+        "length": 0
+      },
+      "hasChildNodes": {
+        "$kind": "Function",
+        "name": "hasChildNodes",
+        "length": 0
+      },
+      "isDefaultNamespace": {
+        "$kind": "Function",
+        "name": "isDefaultNamespace",
+        "length": 1
+      },
+      "isEqualNode": {
+        "$kind": "Function",
+        "name": "isEqualNode",
+        "length": 1
+      },
+      "isSameNode": {
+        "$kind": "Function",
+        "name": "isSameNode",
+        "length": 1
+      },
+      "lookupNamespaceURI": {
+        "$kind": "Function",
+        "name": "lookupNamespaceURI",
+        "length": 1
+      },
+      "lookupPrefix": {
+        "$kind": "Function",
+        "name": "lookupPrefix",
+        "length": 1
+      },
+      "normalize": {
+        "$kind": "Function",
+        "name": "normalize",
+        "length": 0
+      },
+      "removeChild": {
+        "$kind": "Function",
+        "name": "removeChild",
+        "length": 1
+      },
+      "replaceChild": {
+        "$kind": "Function",
+        "name": "replaceChild",
+        "length": 2
+      },
+      "addEventListener": {
+        "$kind": "Function",
+        "name": "anonymous",
+        "length": 3
+      },
+      "dispatchEvent": {
+        "$kind": "Function",
+        "name": "dispatchEvent",
+        "length": 1
+      },
+      "removeEventListener": {
+        "$kind": "Function",
+        "name": "anonymous",
+        "length": 3
+      },
+      "when": {
+        "$kind": "Function",
+        "name": "when",
+        "length": 1
+      }
+    }
+  }
+}

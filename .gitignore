@@ -1,0 +1,50 @@
+# ===== 爬虫下载的媒体文件（体积大且涉及版权，不进仓库）=====
+*.mp3
+*,mp3
+*.mp4
+*.avi
+*.mkv
+*.flac
+*.wav
+*.m4a
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.webp
+*.ico
+*.svg
+
+# 无扩展名的音频（下载时丢了后缀）
+11线程/music1/
+11线程/music2/
+11线程/案例/A Rusty Dream*
+
+# ===== 压缩包 =====
+*.rar
+*.zip
+*.7z
+*.tar.gz
+
+# ===== Python =====
+__pycache__/
+*.py[cod]
+.Python
+build/
+dist/
+*.egg-info/
+.venv/
+venv/
+env/
+
+# ===== IDE / 系统 =====
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ===== 运行日志与临时文件 =====
+*.log
+*.tmp
