@@ -2,12 +2,9 @@
 
 个人学习 Python 爬虫的练习代码合集，内容从 `requests` 入门，逐步到 xpath/jsonpath 解析、自动化爬虫、多线程采集，再到 JS 逆向与登录逆向。代码以亲手实践为主，属练习性质。
 
-- GitHub：<https://github.com/wangfuhong666/python-spider>
-- Gitee：<https://gitee.com/wang_fuhong/python-spider>
-
 ## 环境与依赖
 
-- Python 3（开发环境为 3.13）
+- Python 3（开发环境为 3.9）
 - 主要第三方库：
 
 ```bash
@@ -19,7 +16,7 @@ pip install requests lxml jsonpath jsonpath-ng DrissionPage PyExecJS loguru open
 | `requests` | 发送 HTTP 请求，本仓库用得最多的库 |
 | `lxml` | xpath 解析 HTML |
 | `jsonpath` / `jsonpath_ng` | 从 JSON 响应中按表达式提取数据 |
-| `DrissionPage` | 浏览器自动化采集（替代 Selenium 的方案） |
+| `DrissionPage` | 浏览器自动化采集
 | `PyExecJS` | 在 Python 里执行 JS 代码，JS 逆向的核心工具 |
 | `loguru` | 日志输出 |
 | `openpyxl` | 读写 Excel |
@@ -66,36 +63,12 @@ python 文件名.py
 
 ## 关于仓库内容
 
-- **仓库只保存代码与小型数据**（`.py`、`.js`、`.html`、`.csv`、`.json`、`.txt`、`.xlsx` 等）。爬虫练习过程中下载的**音频、图片、压缩包**已被 `.gitignore` 排除——它们占了近 290 MB，且涉及版权，不适合放进公开仓库。
+- **仓库只保存代码与小型数据**（`.py`、`.js`、`.html`、`.csv`、`.json`、`.txt`、`.xlsx` 等）。
 - 采集结果类的 `csv` / `xlsx` 文件保留在仓库里，作为练习产物留档。
 - 部分脚本中的 **Cookie 与登录态**是调试时从浏览器复制粘贴的，仅供本机学习使用，多数已过期；如果你要复用这些脚本，请替换成自己的。
 - 本仓库代码**仅供学习与个人练习**。抓取任何网站前请阅读该网站的 `robots.txt` 与服务条款，控制请求频率，不要用于商业用途或对目标站点造成压力。
 
-## 自动同步（GitHub ↔ Gitee）
 
-本仓库在 GitHub 和 Gitee 各有一份，靠 GitHub Actions 双向保持一致，**所有分支和标签都会同步**：
-
-| 方向 | 工作流 | 触发时机 | 生效速度 |
-| --- | --- | --- | --- |
-| GitHub → Gitee | `.github/workflows/sync-to-gitee.yml` | 任意分支的 push（也可手动触发） | 约 1 分钟内 |
-| Gitee → GitHub | `.github/workflows/sync-from-gitee.yml` | 每 15 分钟检查一次（也可手动触发） | 最长约 15 分钟 |
-
-所以**只往一端提交就够了**，另一端会自动跟上；往 Gitee 提交时，GitHub 侧最长慢 15 分钟。
-
-设计要点：
-
-- **只做快进（fast-forward）同步，从不 `force push`。** 某个分支如果在两端已经分叉，工作流会失败并点名是哪个分支，而不是悄悄覆盖掉另一边的代码；此时需要手动对齐。
-- **分支删除不会自动传播**：在一边删掉的分支，另一边会保留，需要两边都手动删（刻意为之，避免误删）。
-- GitHub → Gitee 依赖仓库 secret `GITEE_TOKEN`（Gitee 私人令牌，需 `projects` 权限）。令牌被撤销或过期后，同步会在日志里明确报错。
-- 日常本地提交时，`git push` 会通过一个 remote 上的两个 push 地址**同时**推到两端（瞬时，不依赖 Actions）；Actions 主要负责兜底「在网页上直接改代码」的情况。
-- 定时工作流在仓库连续 60 天无活动后会被 GitHub 自动暂停，需要去 Actions 页面手动重新启用。
-
-排查同步问题：
-
-```bash
-gh run list --workflow sync-to-gitee.yml
-gh run view <run-id> --log
-```
 
 ## 许可证
 
