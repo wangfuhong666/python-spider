@@ -58,7 +58,7 @@ desktop.ini
 *.tmp
 
 # ===== 隐私数据：绝不进仓库 =====
-爬虫案例练习/宿舍信息/
+爬虫案例练习/batch_query_merge/
 
 # ===== WorkBuddy 本地项目数据 =====
 .workbuddy/
