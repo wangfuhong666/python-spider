@@ -1,782 +1,0 @@
-<!doctype html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="ai-blackboard-build" content="20260819.134" />
-  <title>æ¾å AI é»æ¿</title>
-  <link rel="icon" href="data:," />
-<link rel="stylesheet" href="./assets/styles-SK6TYJBM.css" />
-</head>
-<body>
-  <div id="appSplashScreen" class="splash-screen">
-    <div class="splash-content-wrapper">
-      <div class="splash-brand-mark">æ¾</div>
-      <h1 class="splash-title">æ¾å AI é»æ¿</h1>
-      <div class="splash-subtitle">AI BLACKBOARD</div>
-      
-      <div class="splash-features-grid">
-        <div class="splash-feature-item">
-          <div class="splash-feature-icon">â¨</div>
-          <div class="splash-feature-text">åéå³é®</div>
-        </div>
-        <div class="splash-feature-item">
-          <div class="splash-feature-icon">ð</div>
-          <div class="splash-feature-text">èå¾è½¬æ¨¡</div>
-        </div>
-        <div class="splash-feature-item">
-          <div class="splash-feature-icon">ð§ </div>
-          <div class="splash-feature-text">æºè½å¹é</div>
-        </div>
-        <div class="splash-feature-item">
-          <div class="splash-feature-icon">ð¨</div>
-          <div class="splash-feature-text">ä¸é®æç</div>
-        </div>
-      </div>
-
-      <div class="splash-progress-container">
-        <div class="splash-loader-line"></div>
-      </div>
-    </div>
-  </div>
-  <!-- SVGs defs removed -->
-  <div class="app-shell">
-    <header class="topbar">
-      <div class="brand-block">
-        <div class="brand-mark">æ¾</div>
-        <div>
-          <div class="brand-name">æ¾å AI é»æ¿</div>
-          <div class="brand-subtitle">AI Blackboard</div>
-        </div>
-      </div>
-      <div class="top-actions">
-        <button class="icon-button" id="undoBtn" title="æ¤é" aria-label="æ¤é"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7v6h6"/><path d="M21 17a9 9 0 0 0-9-9 9 9 0 0 0-6 2.3L3 13"/></svg></button>
-        <button class="icon-button" id="redoBtn" title="éå" aria-label="éå"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 7v6h-6"/><path d="M3 17a9 9 0 0 1 9-9 9 9 0 0 1 6 2.3l3 2.7"/></svg></button>
-        <button class="text-button" id="saveBtn">ä¿å­</button>
-        <button class="icon-button theme-toggle" id="themeToggle" type="button" title="åæ¢ä¸ºé»è²é»æ¿" aria-label="åæ¢ä¸ºé»è²é»æ¿" aria-pressed="false"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg></button>
-        <button class="icon-button" id="importPackageBtn" title="å¯¼å¥å¾çæå¯ç¼è¾ææ¡£å" aria-label="å¯¼å¥å¾çæå¯ç¼è¾ææ¡£å"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" x2="12" y1="3" y2="15"/></svg></button>
-        <button class="icon-button" id="unlockAllBtn" title="è§£éå¨é¨å¯¹è±¡" aria-label="è§£éå¨é¨å¯¹è±¡" disabled><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/></svg></button>
-        <input id="importPackageInput" type="file" accept="image/*,.shgboard.json,application/json" hidden />
-      </div>
-    </header>
-
-    <main class="workspace">
-      <aside class="tool-rail" aria-label="é»æ¿å·¥å·">
-        <button class="tool-button active" data-tool="pen" title="é¢ç¬">
-          <svg class="lucide lucide-pen-tool" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15.707 21.293a1 1 0 0 1-1.414 0l-1.586-1.586a1 1 0 0 1 0-1.414l5.586-5.586a1 1 0 0 1 1.414 0l1.586 1.586a1 1 0 0 1 0 1.414z" /><path d="m18 13-1.375-6.874a1 1 0 0 0-.746-.776L3.235 2.028a1 1 0 0 0-1.207 1.207L5.35 15.879a1 1 0 0 0 .776.746L13 18" /><path d="m2.3 2.3 7.286 7.286" /><circle cx="11" cy="11" r="2" /></svg>
-          <small>é¢ç¬</small>
-        </button>
-        <button class="tool-button" data-tool="highlighter" title="è§åç¬">
-          <svg class="lucide lucide-highlighter" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 11-6 6v3h9l3-3" /><path d="m22 12-4.6 4.6a2 2 0 0 1-2.8 0l-5.2-5.2a2 2 0 0 1 0-2.8L14 4" /></svg>
-          <small>è§å</small>
-        </button>
-        <button class="tool-button" data-tool="eraser" title="æ©¡ç®æ¦">
-          <svg class="lucide lucide-eraser" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 21H8a2 2 0 0 1-1.42-.587l-3.994-3.999a2 2 0 0 1 0-2.828l10-10a2 2 0 0 1 2.829 0l5.999 6a2 2 0 0 1 0 2.828L12.834 21" /><path d="m5.082 11.09 8.828 8.828" /></svg>
-          <small>æ©¡ç®</small>
-        </button>
-        <button class="tool-button" data-tool="select" title="éæ©">
-          <svg class="lucide lucide-mouse-pointer-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z" /></svg>
-          <small>éæ©</small>
-        </button>
-        <button class="tool-button" data-tool="pan" title="ç§»å¨ç»å¸">
-          <svg class="lucide lucide-hand" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2" /><path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2" /><path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8" /><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15" /></svg>
-          <small>ç§»å¨</small>
-        </button>
-        <button class="tool-button" data-tool="text" title="æå¥æå­">
-          <svg class="lucide lucide-type" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v16" /><path d="M4 7V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2" /><path d="M9 20h6" /></svg>
-          <small>æå­</small>
-        </button>
-        <button class="tool-button" data-tool="shape" title="æå¥å¾å½¢">
-          <svg class="lucide lucide-shapes" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.3 10a.7.7 0 0 1-.626-1.079L11.4 3a.7.7 0 0 1 1.198-.043L16.3 8.9a.7.7 0 0 1-.572 1.1Z" /><rect x="3" y="14" width="7" height="7" rx="1" /><circle cx="17.5" cy="17.5" r="3.5" /></svg>
-          <small>å¾å½¢</small>
-        </button>
-        <button class="tool-button physics-sandbox-rail-button" id="openPhysicsSandboxBtn" type="button" title="æå¼ç©çæ²ç" aria-label="æå¼ç©çæ²ç" aria-controls="physicsSandboxPalette" aria-expanded="false">
-          <svg class="lucide lucide-box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21 8-9 5-9-5"/><path d="m3 8 9-5 9 5v8l-9 5-9-5Z"/><path d="M12 13v8"/></svg>
-          <small>æ²ç</small>
-        </button>
-        <div class="rail-divider"></div>
-        <button class="tool-button lab-rail-button" id="openLabBtn" title="æå¼å®éªå®¤" aria-label="æå¼å®éªå®¤" aria-haspopup="dialog">
-          <svg class="lucide lucide-flask-conical" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 2v7.31" /><path d="M14 9.3V2" /><path d="M8.5 2h7" /><path d="M14 9.3 19.57 18a2 2 0 0 1-1.69 3H6.12a2 2 0 0 1-1.69-3L10 9.3" /><path d="M6.1 16h11.8" /></svg>
-          <small>å®éªå®¤</small>
-        </button>
-        <button class="tool-button courseware-center-button" id="openCoursewareCenterBtn" title="è¯¾ä»¶" aria-label="æå¼è¯¾ä»¶ä¸­å¿">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v16"/><path d="M13 13h4M13 17h3"/></svg>
-          <small>è¯¾ä»¶</small>
-        </button>
-        <div class="main-toolbar-divider" aria-hidden="true"></div>
-        <div class="board-footer">
-          <div class="color-palette" id="colorPalette" aria-label="ç¬è¿¹é¢è²">
-            <button class="swatch swatch-white" data-color="#f4f7f6" style="--swatch:#f4f7f6" title="ç½è²" aria-label="ç½è²"></button>
-            <button class="swatch selected" data-color="#17324d" style="--swatch:#17324d" title="æ·±è"></button>
-            <button class="swatch" data-color="#111111" style="--swatch:#111111" title="é»è²"></button>
-            <button class="swatch" data-color="#c84b4b" style="--swatch:#c84b4b" title="çççº¢"></button>
-            <button class="swatch" data-color="#237b73" style="--swatch:#237b73" title="æ¾ç³ç»¿"></button>
-            <button class="swatch" data-color="#d49b2a" style="--swatch:#d49b2a" title="ç¥çé»"></button>
-            <button class="custom-color-swatch" id="customColorSwatch" type="button" title="èªå®ä¹é¢è²" aria-label="èªå®ä¹é¢è²" aria-haspopup="dialog" aria-expanded="false"></button>
-            <input id="customColorInput" type="text" value="#7c3aed" tabindex="-1" aria-hidden="true" />
-            <div class="color-picker-popover" id="customColorPicker" role="dialog" aria-label="èªå®ä¹é¢è²" hidden>
-              <div class="color-picker-heading">
-                <span class="color-picker-title">èªå®ä¹é¢è²</span>
-                <button class="color-picker-close" id="closeColorPickerBtn" type="button" title="å³é­" aria-label="å³é­"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"></path></svg></button>
-              </div>
-              <div class="color-wheel-wrap">
-                <canvas id="colorWheelCanvas" width="240" height="240" aria-label="é¢è²è²è½®"></canvas>
-                <span class="color-wheel-marker" id="colorWheelMarker" aria-hidden="true"></span>
-              </div>
-              <label class="color-brightness-control" aria-label="æåº¦">
-                <span class="color-brightness-track" id="colorBrightnessTrack"></span>
-                <input id="colorBrightnessInput" type="range" min="0" max="100" value="100" aria-label="æåº¦" />
-              </label>
-              <div class="color-value-row">
-                <span class="color-preview" id="colorPreview" aria-hidden="true"></span>
-                <input class="color-hex-input" id="colorHexInput" type="text" value="#7C3AED" inputmode="text" maxlength="7" aria-label="åå­è¿å¶é¢è²å¼" />
-                <button class="color-apply-button" id="applyColorBtn" type="button" title="ä½¿ç¨å½åé¢è²" aria-label="ä½¿ç¨å½åé¢è²"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"></path></svg></button>
-              </div>
-            </div>
-          </div>
-          <div class="stroke-size-selector" aria-label="ç¬è¿¹ç²ç»" id="strokeSizeSelector">
-            <button class="stroke-dot active" data-size="3" title="ç»"><span style="--dot-size: 4px;"></span></button>
-            <button class="stroke-dot" data-size="6" title="ä¸­"><span style="--dot-size: 8px;"></span></button>
-            <button class="stroke-dot" data-size="12" title="ç²"><span style="--dot-size: 14px;"></span></button>
-          </div>
-          <div class="text-tool-controls" id="textToolControls" role="group" aria-label="æå­å·¥å·" hidden>
-            <span class="text-tool-label">æå­</span>
-            <div class="text-tool-size" aria-label="å­å·">
-              <button id="textToolSizeDecreaseBtn" type="button" title="åå°å­å·" aria-label="åå°å­å·">A<sup>â</sup></button>
-              <output id="textToolSizeOutput" title="å½åå­å·">28</output>
-              <button id="textToolSizeIncreaseBtn" type="button" title="å¢å¤§å­å·" aria-label="å¢å¤§å­å·">A<sup>+</sup></button>
-            </div>
-            <span class="text-tool-divider" aria-hidden="true"></span>
-            <button id="textToolBoldBtn" type="button" title="å ç²" aria-label="å ç²" aria-pressed="false"><strong>B</strong></button>
-            <button id="textToolItalicBtn" type="button" title="æä½" aria-label="æä½" aria-pressed="false"><em>I</em></button>
-            <button id="textToolUnderlineBtn" type="button" title="ä¸åçº¿" aria-label="ä¸åçº¿" aria-pressed="false"><span class="text-tool-underline">U</span></button>
-            <button class="text-tool-color" id="textToolColorBtn" type="button" title="æå­é¢è²" aria-label="æå­é¢è²" aria-haspopup="dialog" aria-expanded="false" style="--custom-color: #17324d">
-              <span class="color-indicator" style="background: var(--custom-color, #17324d); width: 16px; height: 16px; border-radius: 50%; box-shadow: 0 0 0 1px rgba(0,0,0,0.15), inset 0 1px 2px rgba(0,0,0,0.1); display: block; pointer-events: none;"></span>
-            </button>
-            <div class="color-picker-popover" id="textToolColorPicker" role="dialog" aria-label="æå­é¢è²" hidden>
-              <div class="color-picker-heading">
-                <span class="color-picker-title">æå­é¢è²</span>
-                <button class="color-picker-close" id="closeTextToolColorPickerBtn" type="button" title="å³é­" aria-label="å³é­"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"></path></svg></button>
-              </div>
-              <div class="color-wheel-wrap">
-                <canvas id="textToolColorWheelCanvas" width="240" height="240" aria-label="é¢è²è²è½®"></canvas>
-                <span class="color-wheel-marker" id="textToolColorWheelMarker" aria-hidden="true"></span>
-              </div>
-              <label class="color-brightness-control" aria-label="æåº¦">
-                <span class="color-brightness-track" id="textToolColorBrightnessTrack"></span>
-                <input id="textToolColorBrightnessInput" type="range" min="0" max="100" value="100" aria-label="æåº¦" />
-              </label>
-              <div class="color-value-row">
-                <span class="color-preview" id="textToolColorPreview" aria-hidden="true"></span>
-                <input class="color-hex-input" id="textToolColorHexInput" type="text" value="#17324D" inputmode="text" maxlength="7" aria-label="åå­è¿å¶é¢è²å¼" />
-                <button class="color-apply-button" id="applyTextToolColorBtn" type="button" title="ä½¿ç¨å½åé¢è²" aria-label="ä½¿ç¨å½åé¢è²"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"></path></svg></button>
-              </div>
-            </div>
-            <span class="text-tool-divider" aria-hidden="true"></span>
-            <div class="text-tool-align" role="group" aria-label="æå­å¯¹é½">
-              <button id="textToolAlignLeftBtn" type="button" title="å·¦å¯¹é½" aria-label="å·¦å¯¹é½" aria-pressed="true"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M4 6h16 M4 12h10 M4 18h14"/></svg></button>
-              <button id="textToolAlignCenterBtn" type="button" title="å±ä¸­å¯¹é½" aria-label="å±ä¸­å¯¹é½" aria-pressed="false"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M4 6h16 M7 12h10 M5 18h14"/></svg></button>
-              <button id="textToolAlignRightBtn" type="button" title="å³å¯¹é½" aria-label="å³å¯¹é½" aria-pressed="false"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M4 6h16 M10 12h10 M6 18h14"/></svg></button>
-            </div>
-          </div>
-          <div class="eraser-mode" id="eraserModeControls" hidden>
-            <span class="eraser-size-label">èå´</span>
-            <input class="eraser-size-range" id="eraserSizeRange" type="range" min="8" max="64" step="1" value="13" aria-label="æ¦é¤èå´å¤§å°" aria-valuemin="8" aria-valuemax="64" aria-valuenow="13" />
-            <output class="eraser-size-output" id="eraserSizeOutput" for="eraserSizeRange">26px</output>
-            <button class="eraser-clear-button" id="clearDrawingBtn" type="button" title="æ¸é¤å½åé¡µç¬è¿¹åå¾å½¢ï¼å¯æ¤é" aria-label="ä¸é®æ¸å±">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16"/><path d="M10 11v6M14 11v6"/><path d="M6 7l1 13h10l1-13"/><path d="M9 7V4h6v3"/></svg>
-              <span>æ¸å±</span>
-            </button>
-            <button class="active" data-eraser-mode="partial">å±é¨</button>
-            <button data-eraser-mode="whole">æ´ç¬</button>
-          </div>
-          <div class="move-tool-controls" id="moveToolControls" role="group" aria-label="ç§»å¨å·¥å·æè½¬æ§å¶" hidden>
-            <span class="move-rotation-label" id="moveRotationLabel">æè½¬</span>
-            <input class="move-rotation-range" id="moveRotationRange" type="range" min="-180" max="180" step="1" value="0" aria-label="æè½¬éä¸­æ¨¡åï¼è´ä¸ç¾å«ååº¦å°ä¸ç¾å«ååº¦" />
-            <output class="move-rotation-output" id="moveRotationOutput" for="moveRotationRange">0Â°</output>
-          </div>
-          <div class="page-strip" id="pageStrip"></div>
-          <button class="delete-page" id="deletePageBtn" type="button" title="å é¤å½åé¡µé¢ï¼å¯æ¤éï¼" aria-label="å é¤å½åé¡µé¢" disabled>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16"/><path d="M10 11v6M14 11v6"/><path d="M6 7l1 13h10l1-13"/><path d="M9 7V4h6v3"/></svg>
-          </button>
-          <button class="add-page" id="addPageBtn" title="æ°å»ºé¡µé¢">ï¼</button>
-        </div>
-      </aside>
-
-      <section class="board-area">
-        <div class="board-header">
-          <div class="board-context"><span class="live-dot"></span><span id="boardModeLabel">èªç±ä¹¦å</span></div>
-          <div class="board-meta"><span id="strokeCount">0 ä¸ªå¯¹è±¡</span><span class="meta-separator"></span><span>ç¬¬ <b id="pageNumber">1</b> é¡µ</span></div>
-        </div>
-        <div class="board-frame" id="boardFrame">
-          <canvas id="boardCanvas"></canvas>
-          <canvas id="boardPendingInkCanvas" aria-hidden="true"></canvas>
-          <canvas id="boardLiveInkCanvas" aria-hidden="true"></canvas>
-          <canvas id="foldModelThreeCanvas" class="fold-model-three-canvas" aria-hidden="true"></canvas>
-          <div id="geometryLabelLayer" class="geometry-label-layer" aria-hidden="true"></div>
-          <div class="courseware-runtime-layer" id="coursewareRuntimeLayer" aria-label="ä¸ä¸è¯¾ä»¶è¿è¡åº"></div>
-          <svg class="physics-sandbox-workspace" id="physicsSandboxWorkspace" aria-label="ç©çæ²çå·¥ä½åº" hidden></svg>
-          <section class="physics-control-panel physics-sandbox-native-panel" id="physicsSandboxControlDock" aria-label="é»æ¿ç©çè®¾ç½®é¢æ¿" hidden>
-            <header class="physics-panel-head">
-              <div><small>é»æ¿ç©ç</small><strong id="physicsSandboxSelectedLabel">ç©çä¸ç</strong></div>
-              <button id="physicsSandboxCloseBtn" type="button" title="å³é­ç©çè®¾ç½®" aria-label="å³é­ç©çè®¾ç½®">Ã</button>
-            </header>
-            <div class="physics-state-line" role="status" aria-live="polite">
-              <span></span><strong id="physicsSandboxComponentCount">0 ä¸ªç©çå¯¹è±¡</strong><small>åå¾å³æ¨¡å</small>
-            </div>
-            <div class="physics-primary-actions" role="group" aria-label="ç©çæ­æ¾æ§å¶">
-              <button id="physicsSandboxPlayBtn" type="button">è¿è¡</button>
-              <button id="physicsSandboxResetBtn" type="button" disabled>å¤ä½</button>
-              <button id="physicsSandboxScissorsBtn" type="button" hidden>åªå</button>
-            </div>
-            <div class="physics-readouts" aria-label="å®æ¶ç©çé">
-              <div><small>æ¶é´</small><strong><output id="physicsSandboxTimeOutput">0.00 s</output></strong></div>
-              <div><small>æºæ¢°è½</small><strong><output id="physicsSandboxEnergyOutput">0.00 J</output></strong></div>
-              <div><small>å¨é</small><strong><output id="physicsSandboxMomentumOutput">0.00 kgÂ·m/s</output></strong></div>
-              <div><small>æ¥è§¦</small><strong><output id="physicsSandboxContactOutput">0</output></strong></div>
-            </div>
-            <details class="physics-parameters physics-sandbox-inspector" id="physicsSandboxInspector" open hidden>
-              <summary>ç©ä½ï¼æ¥è§¦åæ°</summary>
-              <div class="physics-sandbox-inspector-fields" id="physicsSandboxInspectorFields"></div>
-            </details>
-          </section>
-          <div class="shape-palette" id="shapePalette" aria-label="éæ©å¹³é¢æç«ä½å¾å½¢" hidden>
-            <div class="shape-mode-switch" data-shape-panel="root" role="group" aria-label="å¾å½¢åç±»">
-              <button type="button" data-shape-mode="plane" aria-label="æå¼å¹³é¢å¾å½¢" aria-pressed="false"><strong>å¹³é¢</strong><small>äºç»´å¾å½¢</small></button>
-              <button type="button" data-shape-mode="solid" aria-label="æå¼ç«ä½å¾å½¢" aria-pressed="false"><strong>ç«ä½</strong><small>ä¸ç»´å ä½</small></button>
-            </div>
-            <div class="shape-plane-tools" data-shape-panel="plane" hidden>
-              <button type="button" class="shape-panel-back" data-shape-mode-back aria-label="è¿åå¾å½¢åç±»" title="è¿åå¹³é¢ä¸ç«ä½éæ©">ç±»å</button>
-              <button type="button" data-shape-kind="rectangle" class="active" title="ç©å½¢" aria-label="ç©å½¢"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="6" width="16" height="12" rx="1"></rect></svg></button>
-              <button type="button" data-shape-kind="ellipse" title="æ¤­å" aria-label="æ¤­å"><svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="12" rx="8" ry="5.5"></ellipse></svg></button>
-              <button type="button" data-shape-kind="circle" title="å" aria-label="å"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="7.5"></circle></svg></button>
-              <button type="button" data-shape-kind="semicircle" title="åå" aria-label="åå"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 17a8 8 0 0 1 16 0H4Z"></path></svg></button>
-              <button type="button" data-shape-kind="triangle" title="ä¸è§å½¢" aria-label="ä¸è§å½¢"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4 21 19H3Z"></path></svg></button>
-              <button type="button" data-shape-kind="line" title="ç´çº¿" aria-label="ç´çº¿"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19 20 5"></path></svg></button>
-              <button type="button" data-shape-kind="arrow" title="ç®­å¤´" aria-label="ç®­å¤´"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15"></path><path d="m14 6 6 6-6 6"></path></svg></button>
-              <button type="button" data-shape-kind="coordinate-system" title="åæ ç³»" aria-label="åæ ç³»"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h16M4 20V4"></path><path d="m20 20-3-2M20 20l-3 2M4 4l-2 3M4 4l2 3"></path><path d="M8 20V8M12 20V8M16 20V8M4 16h16M4 12h16M4 8h16"></path></svg></button>
-              <span class="shape-palette-divider" aria-hidden="true"></span>
-              <span class="shape-snap-state" id="shapeSnapState">èªç±</span>
-              <button type="button" data-shape-snap="toggle" title="åæ¢ç½æ ¼å¸é" aria-label="èªç±ç»å¶ï¼ç¹å»å¼å¯ç½æ ¼å¸éï¼" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v16H4z"></path><path d="M4 10h16M10 4v16"></path></svg></button>
-              <span class="shape-assist-state" id="shapeAssistState">è¾å©</span>
-              <button type="button" data-shape-assist-snap="toggle" title="åæ¢è¾å©çº¿å¸é" aria-label="è¾å©çº¿å¸é" aria-pressed="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h5v5H5zM14 14h5v5h-5z"></path><path d="m10 7 7 10M14 10l3-3M10 14l-3 3"></path></svg></button>
-              <span class="shape-palette-divider" aria-hidden="true"></span>
-              <span class="shape-fill-state" id="shapeFillState">ç©ºå¿</span>
-              <button type="button" data-shape-fill="toggle" title="åæ¢å¡«å" aria-label="åæ¢å¡«å" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4.5 12a7.5 7.5 0 0 0 15 0Z"></path><path d="M12 19.5V8"></path></svg></button>
-            </div>
-            <div class="shape-solid-tools" data-shape-panel="solid" hidden aria-label="ç«ä½å¾å½¢ç±»å">
-              <button type="button" class="shape-panel-back" data-shape-mode-back aria-label="è¿åå¾å½¢åç±»" title="è¿åå¹³é¢ä¸ç«ä½éæ©">ç±»å</button>
-              <button type="button" data-solid-kind="cube" aria-label="åå»ºæ­£æ¹ä½">æ­£æ¹ä½</button>
-              <button type="button" data-solid-kind="cuboid" aria-label="åå»ºé¿æ¹ä½">é¿æ¹ä½</button>
-              <button type="button" data-solid-kind="prism-3" aria-label="åå»ºä¸æ£±æ±">ä¸æ£±æ±</button>
-              <button type="button" data-solid-kind="prism-4" aria-label="åå»ºåæ£±æ±">åæ£±æ±</button>
-              <button type="button" data-solid-kind="tetrahedron" aria-label="åå»ºæ­£åé¢ä½">æ­£åé¢ä½</button>
-              <button type="button" data-solid-kind="pyramid-3" aria-label="åå»ºä¸æ£±é¥">ä¸æ£±é¥</button>
-              <button type="button" data-solid-kind="pyramid-4" aria-label="åå»ºåæ£±é¥">åæ£±é¥</button>
-              <button type="button" data-solid-kind="cylinder" aria-label="åå»ºåæ±ä½">åæ±</button>
-              <button type="button" data-solid-kind="cone" aria-label="åå»ºåé¥">åé¥</button>
-              <button type="button" data-solid-kind="frustum" aria-label="åå»ºåå°">åå°</button>
-              <button type="button" data-solid-kind="sphere" aria-label="åå»ºçä½">ç</button>
-              <button type="button" data-solid-kind="hemisphere" aria-label="åå»ºåç">åç</button>
-              <button type="button" class="spatial-coordinate-launcher" data-spatial-coordinate-kind="cartesian-3d" aria-label="åå»ºç©ºé´ç´è§åæ ç³»" title="ç©ºé´ç´è§åæ ç³» O-xyz">
-                <svg class="lucide lucide-axis-3d" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4v16h16"></path><path d="m4 20 7-7"></path></svg>
-                <span>ç©ºé´åæ ç³»</span>
-              </button>
-            </div>
-          </div>
-          <aside class="physics-sandbox-palette" id="physicsSandboxPalette" aria-label="ç©çæ²çåä»¶" hidden>
-            <div class="physics-sandbox-mode-switch" role="group" aria-label="ç©çæ²çåç±»">
-              <button class="physics-sandbox-mode is-active" type="button" data-physics-sandbox-mode="components" aria-label="æ¾ç¤ºåºç¡åä»¶" aria-pressed="true">åä»¶</button>
-              <button class="physics-sandbox-mode" type="button" data-physics-sandbox-mode="presets" aria-label="æ¾ç¤ºç»å¸ç»å" aria-pressed="false">ç»å¸</button>
-            </div>
-            <span class="physics-sandbox-divider" aria-hidden="true"></span>
-            <div class="physics-sandbox-items" data-physics-sandbox-panel="components" role="group" aria-label="åºç¡ç©çåä»¶">
-              <button type="button" data-physics-sandbox-item="ball" title="å°ç" aria-label="éæ©å°ç" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="7.5"></circle></svg></button>
-              <button type="button" data-physics-sandbox-item="block" title="ç©å" aria-label="éæ©ç©å" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="6" width="14" height="12" rx="1.5"></rect></svg></button>
-              <button type="button" data-physics-sandbox-item="plank" title="æ¿" aria-label="éæ©æ¿" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="9" width="18" height="6"></rect></svg></button>
-              <button type="button" data-physics-sandbox-item="surface" title="æéå¹³é¢" aria-label="éæ©æéå¹³é¢" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 15h18"></path><path d="M6 15v3M18 15v3"></path></svg></button>
-              <button type="button" data-physics-sandbox-item="incline" title="æé¢" aria-label="éæ©æé¢" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18h16L20 7Z"></path></svg></button>
-              <button type="button" data-physics-sandbox-item="wall" title="å¢" aria-label="éæ©å¢" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3v18M16 3v18M3 8h18M3 16h18"></path></svg></button>
-              <button type="button" data-physics-sandbox-item="arc-track" title="åå¼§è½¨é" aria-label="æå¥åå¼§è½¨é" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18a8 8 0 0 1 16 0"></path><path d="M18.8 9.4A8 8 0 0 1 20 13.6" opacity=".55"></path></svg></button>
-              <button type="button" data-physics-sandbox-item="anchor" title="åºå®ç¹" aria-label="éæ©åºå®ç¹" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7" r="3"></circle><path d="M12 10v10M7 16h10"></path></svg></button>
-              <button type="button" data-physics-sandbox-item="rope" title="è½»ç»³" aria-label="éæ©è½»ç»³" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.5 14.5 6 17a3.5 3.5 0 0 0 5 5l3-3"></path><path d="m15.5 9.5 2.5-2.5a3.5 3.5 0 0 0-5-5l-3 3"></path><path d="m8 16 8-8"></path></svg></button>
-              <button type="button" data-physics-sandbox-item="spring" title="å¼¹ç°§" aria-label="æå¥å¼¹ç°§" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h3l2-5 4 10 4-10 2 5h3"></path></svg></button>
-              <button type="button" data-physics-sandbox-item="conveyor" title="ä¼ éå¸¦" aria-label="éæ©ä¼ éå¸¦" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="10" rx="5"></rect><path d="M8 12h8M14 10l2 2-2 2"></path></svg></button>
-              <button type="button" data-physics-sandbox-item="movable-wedge" title="å¨æå" aria-label="æå¥å¨æå" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 16h16L20 6Z"></path><path d="M5 20h14M5 20l3-2M5 20l3 2M19 20l-3-2M19 20l-3 2"></path></svg></button>
-              <button type="button" data-physics-sandbox-item="movable-groove" title="å¯å¨å¹æ§½" aria-label="æå¥å¯å¨å¹æ§½" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5a6 6 0 0 0 12 0"></path><path d="M6 5H4v13h16V5h-2"></path></svg></button>
-              <button type="button" data-physics-sandbox-item="half-groove" title="åå¹æ§½" aria-label="æå¥åå¹æ§½" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5a6 6 0 0 0 6 6"></path><path d="M6 5H4v13h8"></path></svg></button>
-              <button type="button" data-physics-sandbox-item="light-rod" title="è½»æ" aria-label="æå¥è½»æ" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 20 6"></path><circle cx="4" cy="18" r="2"></circle><circle cx="20" cy="6" r="2"></circle></svg></button>
-              <button type="button" data-physics-sandbox-item="guide-rod" title="åæ»æ" aria-label="æå¥åæ»æ" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 20 6"></path><path d="M7 17 5 19M19 5l-2 2"></path></svg></button>
-              <button type="button" data-physics-sandbox-item="ring" title="å¥ç¯" aria-label="æå¥å¥ç¯" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="7"></circle><circle cx="12" cy="12" r="3.2"></circle></svg></button>
-              <button type="button" data-physics-sandbox-item="pulley" title="æ»è½®" aria-label="æå¥æ»è½®" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="11" r="6.5"></circle><circle cx="12" cy="11" r="2"></circle><path d="M12 17.5v3M8 20.5h8"></path></svg></button>
-              <button type="button" data-physics-sandbox-item="global-settings" title="å¨å±è®¾ç½®" aria-label="æå¼å¨å±è®¾ç½®" aria-pressed="false"><svg class="lucide lucide-settings-2" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 7h-9"></path><path d="M14 17H5"></path><circle cx="17" cy="17" r="3"></circle><circle cx="7" cy="7" r="3"></circle></svg></button>
-            </div>
-            <div class="physics-sandbox-items" data-physics-sandbox-panel="presets" role="group" aria-label="ç»å¸ç©çç»å" hidden>
-              <button type="button" data-physics-sandbox-item="free-fall" title="èªç±è½ä½" aria-label="éæ©èªç±è½ä½ç»å" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="6" r="3"></circle><path d="M12 11v9M8 16l4 4 4-4"></path></svg></button>
-              <button type="button" data-physics-sandbox-item="surface-body" title="å¹³é¢ä¸ç©ä½" aria-label="éæ©å¹³é¢ä¸ç©ä½ç»å" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="10" r="3"></circle><path d="M3 15h18"></path></svg></button>
-              <button type="button" data-physics-sandbox-item="incline-body" title="æé¢ä¸ç©ä½" aria-label="éæ©æé¢ä¸ç©ä½ç»å" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="15" cy="7" r="2.5"></circle><path d="M4 19h16L20 9Z"></path></svg></button>
-              <button type="button" data-physics-sandbox-item="pendulum" title="åæ" aria-label="éæ©åæç»å" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14M12 4v10"></path><circle cx="12" cy="17" r="3"></circle></svg></button>
-              <button type="button" data-physics-sandbox-item="horizontal-spring" title="æ°´å¹³å¼¹ç°§" aria-label="éæ©æ°´å¹³å¼¹ç°§ç»å" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5v14M3 12h3l2-5 4 10 4-10 2 5h3"></path></svg></button>
-              <button type="button" data-physics-sandbox-item="vertical-spring" title="ç«ç´å¼¹ç°§" aria-label="éæ©ç«ç´å¼¹ç°§ç»å" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h14M12 3v3l-4 2 8 4-8 4 4 2v3"></path></svg></button>
-              <button type="button" data-physics-sandbox-item="conveyor-body" title="ä¼ éå¸¦ä¸ç©ä½" aria-label="éæ©ä¼ éå¸¦ä¸ç©ä½ç»å" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="4" width="6" height="5" rx="1"></rect><rect x="3" y="10" width="18" height="9" rx="4.5"></rect><path d="M8 14h8M14 12l2 2-2 2"></path></svg></button>
-              <button type="button" data-physics-sandbox-item="surface-arc-track" title="å¹³é¢ä¸ååè½¨é" aria-label="éæ©å¹³é¢ä¸ååè½¨éç»å" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18h6M9 18a6 6 0 0 1 12 0"></path></svg></button>
-              <button type="button" data-physics-sandbox-item="ball-movable-groove" title="å°çâå¯å¨å¹æ§½" aria-label="æå¥å°çä¸å¯å¨å¹æ§½ç»å" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7a8 8 0 0 0 16 0"></path><circle cx="17" cy="9" r="2.5"></circle><path d="M5 20h14"></path></svg></button>
-              <button type="button" data-physics-sandbox-item="ball-half-groove" title="å°çâåå¹æ§½" aria-label="æå¥å°çä¸åå¹æ§½ç»å" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5a9 9 0 0 0 9 9"></path><circle cx="7" cy="7" r="2.5"></circle><path d="M5 19h13"></path></svg></button>
-              <button type="button" data-physics-sandbox-item="block-movable-wedge" title="ç©åâå¨æå" aria-label="æå¥ç©åä¸å¨æåç»å" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19h16L20 8Z"></path><rect x="12" y="5" width="5" height="4" rx="1"></rect></svg></button>
-              <button type="button" data-physics-sandbox-item="rod-pendulum" title="ææ" aria-label="æå¥ææç»å" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="4" r="2"></circle><path d="M12 6v12"></path><circle cx="12" cy="19" r="3"></circle></svg></button>
-              <button type="button" data-physics-sandbox-item="ring-guide" title="å¥ç¯æ²¿å¾æåæ»æ" aria-label="æå¥å¥ç¯æ²¿å¾æåæ»æç»å" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 20 6"></path><circle cx="13.5" cy="10.5" r="3.5"></circle><circle cx="13.5" cy="10.5" r="1.5"></circle></svg></button>
-              <button type="button" data-physics-sandbox-item="elastic-rope-oscillator" title="å¼¹æ§ç»³æ¯å­" aria-label="æå¥å¼¹æ§ç»³æ¯å­ç»å" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="3.5" r="2"></circle><path d="M12 5.5v2l-3 2 6 3-6 3 3 2v1"></path><circle cx="12" cy="20" r="2.5"></circle></svg></button>
-              <button type="button" data-physics-sandbox-item="atwood-machine" title="é¿ç¹ä¼å¾·æº" aria-label="æå¥é¿ç¹ä¼å¾·æºç»å" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="5" r="4"></circle><path d="M8 5v12M16 5v12"></path><rect x="5" y="17" width="6" height="4"></rect><rect x="13" y="17" width="6" height="4"></rect></svg></button>
-              <button type="button" data-physics-sandbox-item="table-hanging-block" title="æ¡é¢âæ¬æç©å" aria-label="æå¥æ¡é¢ä¸æ¬æç©åç»å" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 13h13M16 13a3 3 0 0 0 3-3V6"></path><circle cx="19" cy="5" r="2"></circle><rect x="4" y="13" width="5" height="4"></rect><rect x="17" y="17" width="5" height="4"></rect></svg></button>
-              <button type="button" data-physics-sandbox-item="movable-pulley-lift" title="å¨æ»è½®æå" aria-label="æå¥å¨æ»è½®æåç»å" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="13" r="4"></circle><path d="M5 4v5M19 4v5M5 4h14M8 13 5 9M16 13l3-4"></path><rect x="16" y="15" width="5" height="4"></rect></svg></button>
-              <button type="button" data-physics-sandbox-item="horizontal-projectile" title="å¹³æè¿å¨" aria-label="æå¥å¹³æè¿å¨ç»å" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="7" r="2.5"></circle><path d="M8.5 7h10M16 5l3 2-3 2M5 18h14"></path></svg></button>
-              <button type="button" data-physics-sandbox-item="oblique-projectile" title="ææè¿å¨" aria-label="æå¥ææè¿å¨ç»å" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="16" r="2.5"></circle><path d="M7 15C10 5 16 5 19 12M16 10l3 2-1 3M4 20h16"></path></svg></button>
-              <button type="button" data-physics-sandbox-item="quarter-arc-projectile" title="ååä¹ä¸åè½¨éå¹³æ" aria-label="æå¥ååä¹ä¸åè½¨éå¹³æç»å" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 18a8 8 0 0 1 8-8h6"></path><circle cx="6" cy="10" r="2"></circle><path d="M4 20h16"></path></svg></button>
-              <button type="button" data-physics-sandbox-item="vertical-circle-track" title="ç«ç´åè½¨é" aria-label="æå¥ç«ç´åè½¨éç»å" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"></circle><circle cx="12" cy="4" r="2"></circle><path d="M12 2v3"></path></svg></button>
-              <button type="button" data-physics-sandbox-item="head-on-collision" title="å¯¹å¿ç¢°æ" aria-label="æå¥å¯¹å¿ç¢°æç»å" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="12" r="3"></circle><path d="M9 12h6M12 9l3 3-3 3"></path></svg></button>
-            </div>
-          </aside>
-          <div class="radial-ai-menu" id="radialAiMenu" aria-label="AI æä½" role="menu" hidden>
-            <div class="radial-ai-slices">
-              <button class="radial-ai-slice" data-ai-action="physics" style="--angle: 0deg;" aria-label="èµäºç©çå±æ§" role="menuitem">
-                <div class="slice-content" style="--counter: 0deg; --icon-color: #3b82f6; --icon-bg: #eff6ff;">
-                  <div class="slice-icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M152,192H104L72,112l32-80,32,80Z" opacity="0.2" fill="currentColor"/><path d="M160,192a8,8,0,0,1-8-8V152H104v32a8,8,0,0,1-16,0V112a8,8,0,0,1,2.69-5.94l32-80a8,8,0,0,1,14.62,0l32,80A8,8,0,0,1,160,112v72A8,8,0,0,1,160,192Zm-56-56h48V119.53l-24-60-24,60Z" fill="currentColor"/></svg></div>
-                  <span class="slice-text">ç©ç</span>
-                </div>
-              </button>
-              <button class="radial-ai-slice" data-ai-action="formula" style="--angle: 51.4deg;" aria-label="å¬å¼è¯å«" role="menuitem">
-                <div class="slice-content" style="--counter: -51.4deg; --icon-color: #14b8a6; --icon-bg: #f0fdfa;">
-                  <div class="slice-icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M208,128a8,8,0,0,1-8,8H151.78l-40.42,88.94A16,16,0,0,1,96.8,232a15.82,15.82,0,0,1-14.3-9.52L48,143.08,35.25,168.6a8,8,0,0,1-14.32-7.16l16-32A16,16,0,0,1,51.2,120a15.82,15.82,0,0,1,14.3,9.52L104,213.91l38.25-84.14A16,16,0,0,1,156.8,120H200A8,8,0,0,1,208,128Z" fill="currentColor"/></svg></div>
-                  <span class="slice-text">å¬å¼</span>
-                </div>
-              </button>
-              <button class="radial-ai-slice" data-ai-action="sketch" style="--angle: 102.9deg;" aria-label="èå¾è½¬æ¨¡å" role="menuitem">
-                <div class="slice-content" style="--counter: -102.9deg; --icon-color: #8b5cf6; --icon-bg: #f5f3ff;">
-                  <div class="slice-icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M128,128,211.36,80l-83.33-48L44.64,80Z" opacity="0.2" fill="currentColor"/><path d="M219.34,73.06l-83.31-48a16,16,0,0,0-16,0L36.66,73.06A16,16,0,0,0,28.64,87V169a16,16,0,0,0,8,13.9l83.33,48a16,16,0,0,0,16,0l83.33-48A16,16,0,0,0,227.36,169V87A16,16,0,0,0,219.34,73.06ZM128,45.89l76.51,44.1L128,134.11,51.49,90ZM44.64,100.86,120,144.29V232.55L44.64,189.11ZM136,232.55V144.29l75.36-43.43v88.25Z" fill="currentColor"/></svg></div>
-                  <span class="slice-text">æ¨¡å</span>
-                </div>
-              </button>
-              <button class="radial-ai-slice" data-ai-action="explain" style="--angle: 154.3deg;" aria-label="éç" role="menuitem">
-                <div class="slice-content" style="--counter: -154.3deg; --icon-color: #f59e0b; --icon-bg: #fffbeb;">
-                  <div class="slice-icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M176,120a48,48,0,0,1-48,48H128a48,48,0,0,1-48-48V88h96Z" opacity="0.2" fill="currentColor"/><path d="M128,240a16,16,0,0,1-16-16V208h32v16A16,16,0,0,1,128,240ZM88,88v32a40,40,0,0,0,40,40h0a40,40,0,0,0,40-40V88A40,40,0,0,0,88,88ZM232,88a8,8,0,0,1-8,8H192a8,8,0,0,1,0-16h32A8,8,0,0,1,232,88Zm-17.75,75.12a8,8,0,0,1-10.87,3.63l-28.53-14.26a8,8,0,1,1,7.16-14.32l28.53,14.26A8,8,0,0,1,214.25,163.12ZM201.2,35.83l-24.1,24.1a8,8,0,1,1-11.31-11.31l24.1-24.1a8,8,0,1,1,11.31,11.31ZM64,80H32a8,8,0,0,0,0,16H64a8,8,0,0,0,0-16ZM54.8,60.1l-24.1-24.1A8,8,0,0,1,42,24.69l24.1,24.1A8,8,0,1,1,54.8,60.1Zm45-20.73V16a8,8,0,0,1,16,0V39.37a8,8,0,0,1-16,0Zm56.46,4.64-16-16A8,8,0,0,1,151.62,16L167.63,32a8,8,0,0,1-11.37,12Z" fill="currentColor"/></svg></div>
-                  <span class="slice-text">éç</span>
-                </div>
-              </button>
-              <button class="radial-ai-slice" data-ai-action="courseware" style="--angle: 205.7deg;" aria-label="æ¾è¯¾ä»¶" role="menuitem">
-                <div class="slice-content" style="--counter: -205.7deg; --icon-color: #f43f5e; --icon-bg: #fff1f2;">
-                  <div class="slice-icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M216,64V176a8,8,0,0,1-8,8H48a8,8,0,0,1-8-8V64a8,8,0,0,1,8-8H208A8,8,0,0,1,216,64Z" opacity="0.2" fill="currentColor"/><path d="M216,48H40a16,16,0,0,0-16,16V176a16,16,0,0,0,16,16H120v32H88a8,8,0,0,0,0,16h80a8,8,0,0,0,0-16H136V192h80a16,16,0,0,0,16-16V64A16,16,0,0,0,216,48ZM40,176V64H216V176Zm56-80v48a8,8,0,0,1-16,0V96a8,8,0,0,1,16,0Zm48,24v24a8,8,0,0,1-16,0V120a8,8,0,0,1,16,0Zm48-32v56a8,8,0,0,1-16,0V88a8,8,0,0,1,16,0Z" fill="currentColor"/></svg></div>
-                  <span class="slice-text">è¯¾ä»¶</span>
-                </div>
-              </button>
-              <button class="radial-ai-slice" data-ai-action="image" style="--angle: 257.1deg;" aria-label="éå¾" role="menuitem">
-                <div class="slice-content" style="--counter: -257.1deg; --icon-color: #6366f1; --icon-bg: #eef2ff;">
-                  <div class="slice-icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M208,40H48A16,16,0,0,0,32,56V200a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V56A16,16,0,0,0,208,40Zm-24,64a24,24,0,1,1,24-24A24,24,0,0,1,184,104Zm32,96H40L108,132l32,32,44-44,40,40Z" opacity="0.2" fill="currentColor"/><path d="M208,32H48A24,24,0,0,0,24,56V200a24,24,0,0,0,24,24H208a24,24,0,0,0,24-24V56A24,24,0,0,0,208,32ZM48,48H208a8,8,0,0,1,8,8V184.69L184,152l-44,44L108,120,40,188V56A8,8,0,0,1,48,48Zm160,160H48a8,8,0,0,1-8-8v-3.31l68-68,32,32L184,120l32,32v48A8,8,0,0,1,208,208ZM184,80a16,16,0,1,1-16-16A16,16,0,0,1,184,80Z" fill="currentColor"/></svg></div>
-                  <span class="slice-text">éå¾</span>
-                </div>
-              </button>
-              <button class="radial-ai-slice" data-ai-action="organize" style="--angle: 308.6deg;" aria-label="æ´ç" role="menuitem">
-                <div class="slice-content" style="--counter: -308.6deg; --icon-color: #10b981; --icon-bg: #ecfdf5;">
-                  <div class="slice-icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M128,208l-27.79,27.79a15.87,15.87,0,0,1-22.63,0l-57.37-57.37a15.87,15.87,0,0,1,0-22.63L48,128Z" opacity="0.2" fill="currentColor"/><path d="M232.49,85.51,200.72,66.19a8,8,0,0,0-8.32,0L160.63,85.51a8,8,0,0,1-11.66-8.23l7.93-35.85a8,8,0,0,0-3.15-8.15L122,14a8,8,0,0,1,4.4-14,8.12,8.12,0,0,1,4,.75l35.85,15.42a8,8,0,0,0,8.32,0l31.77-19.32a8,8,0,0,1,11.66,8.23l-7.93,35.85a8,8,0,0,0,3.15,8.15L245,68.4a8,8,0,0,1-4.4,14A8.12,8.12,0,0,1,236.63,81.65ZM95,116.91a8,8,0,0,0-5.83-5.83l-19.5-5.22a8,8,0,0,1,0-15.42l19.5-5.22a8,8,0,0,0,5.83-5.83l5.22-19.5a8,8,0,0,1,15.42,0l5.22,19.5a8,8,0,0,0,5.83,5.83l19.5,5.22a8,8,0,0,1,0,15.42l-19.5,5.22a8,8,0,0,0-5.83,5.83l-5.22,19.5a8,8,0,0,1-15.42,0Zm140-5.61a8,8,0,0,0-5.83-5.83l-19.5-5.22a8,8,0,0,1,0-15.42l19.5-5.22a8,8,0,0,0,5.83-5.83l5.22-19.5a8,8,0,0,1,15.42,0l5.22,19.5a8,8,0,0,0,5.83,5.83l19.5,5.22a8,8,0,0,1,0,15.42l-19.5,5.22a8,8,0,0,0-5.83,5.83l-5.22,19.5a8,8,0,0,1-15.42,0ZM163.66,134.34,69.66,228.34a16,16,0,0,1-22.63,0L27.66,209a16,16,0,0,1,0-22.63l94-94a8,8,0,0,1,11.32,11.32l-94,94L58.34,217l94-94a8,8,0,0,1,11.32,11.32Z" fill="currentColor"/></svg></div>
-                  <span class="slice-text">æ´ç</span>
-                </div>
-              </button>
-            </div>
-            <div class="radial-solid-options" id="radialSolidOptions" aria-label="åå½¢çæç«ä½" hidden>
-              <button class="radial-solid-option" type="button" data-solid-choice="cylinder" style="--solid-angle: 79deg;" title="ä»¥éä¸­åä¸ºåºé¢çæåæ±ä½" aria-label="çæåæ±ä½">
-                <svg viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="32" cy="15" rx="18" ry="7" fill="currentColor" opacity=".24"/><path d="M14 15v30c0 4 8 7 18 7s18-3 18-7V15" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/><ellipse cx="32" cy="15" rx="18" ry="7" fill="none" stroke="currentColor" stroke-width="5"/><path d="M14 45c0 4 8 7 18 7s18-3 18-7" fill="none" stroke="currentColor" stroke-width="5"/></svg>
-                <span>æ±ä½</span>
-              </button>
-              <button class="radial-solid-option" type="button" data-solid-choice="sphere" style="--solid-angle: 128deg;" title="ä»¥éä¸­åçæçä½" aria-label="çæçä½">
-                <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="20" fill="currentColor" opacity=".18"/><circle cx="32" cy="32" r="20" fill="none" stroke="currentColor" stroke-width="5"/><ellipse cx="32" cy="32" rx="20" ry="7" fill="none" stroke="currentColor" stroke-width="4"/><path d="M32 12c7 8 7 32 0 40M32 12c-7 8-7 32 0 40" fill="none" stroke="currentColor" stroke-width="3" opacity=".75"/></svg>
-                <span>çä½</span>
-              </button>
-              <button class="radial-solid-option" type="button" data-solid-choice="hemisphere" style="--solid-angle: 103.5deg;" title="ä»¥éä¸­ååçæåçä½" aria-label="çæåçä½" hidden>
-                <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M10 43a22 22 0 0 1 44 0Z" fill="currentColor" opacity=".2"/><path d="M10 43a22 22 0 0 1 44 0M10 43h44" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><ellipse cx="32" cy="43" rx="22" ry="6" fill="none" stroke="currentColor" stroke-width="3" opacity=".72"/></svg>
-                <span>åçä½</span>
-              </button>
-            </div>
-            <button class="radial-ai-core" id="radialAiCloseBtn" title="å³é­ AI èå" aria-label="å³é­ AI èå">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M128,48,107,91a15.93,15.93,0,0,1-8.05,8.05L56,120l43,21a15.93,15.93,0,0,1,8.05,8.05l21,43,21-43A15.93,15.93,0,0,1,157,141l43-21-43-21A15.93,15.93,0,0,1,149,91Z" opacity="0.2" fill="currentColor"/><path d="M211.9,112.55,161.87,88.7a8,8,0,0,1-4-4L134,34.65a8,8,0,0,0-14.41,0L95.82,84.68a8,8,0,0,1-4,4L41.76,112.55a8,8,0,0,0,0,14.41l50.08,23.85a8,8,0,0,1,4,4l23.77,50a8,8,0,0,0,14.41,0l23.77-50a8,8,0,0,1,4-4l50.08-23.85A8,8,0,0,0,211.9,112.55ZM126.8,187.35,108.57,149a23.94,23.94,0,0,0-12.06-12.06l-38.39-18.28,38.39-18.28A23.94,23.94,0,0,0,108.57,88.31l18.23-38.39L145,88.31a23.94,23.94,0,0,0,12.06,12.06l38.39,18.28L157.1,126.93A23.94,23.94,0,0,0,145,139ZM244.6,47.24a8,8,0,0,0-6.19-5.46L210.82,36,205,8.42a8,8,0,0,0-15.58,0L183.54,36l-27.59,5.77a8,8,0,0,0-2.39,13.78l21.28,19L169,101.4a8,8,0,0,0,11.59,8.42L205,97l24.36,12.81A8,8,0,0,0,241,101.4l-5.81-26.89,21.28-19A8,8,0,0,0,244.6,47.24Zm-17,14.49a8,8,0,0,0-2.36,6l3.39,15.68L214.41,76a8,8,0,0,0-7.46,0L192.74,83.42l3.39-15.68a8,8,0,0,0-2.36-6l-12.42-11.08,16.1-3.37a8,8,0,0,0,5.78-5.78l3.37-16.1,3.37,16.1a8,8,0,0,0,5.78,5.78l16.1,3.37Z" fill="currentColor"/></svg>
-            </button>
-          </div>
-          <div class="mini-map" id="miniMap" aria-hidden="true" hidden><canvas id="miniMapCanvas"></canvas><span class="mini-map-zoom" id="miniMapZoom" aria-live="polite">100%</span></div>
-          <svg class="lasso-overlay" id="lassoOverlay" aria-hidden="true" hidden>
-            <polyline id="lassoPath" points=""></polyline>
-          </svg>
-          <div class="eraser-cursor" id="eraserCursor" aria-hidden="true" hidden></div>
-          <textarea class="inline-text-editor" id="inlineTextEditor" aria-label="é»æ¿æå­è¾å¥" placeholder="è¾å¥æå­ï¼Ctrl + Enter å®æ" hidden></textarea>
-          <div class="inline-text-actions" id="inlineTextActions" hidden>
-            <button type="button" data-text-action="confirm">ç¡®è®¤</button>
-            <button type="button" data-text-action="cancel">åæ¶</button>
-          </div>
-          <div class="board-empty" id="boardEmpty">
-            <div class="empty-symbol">â¦</div>
-            <div class="empty-title">ä»ä¸ç¬å¼å§</div>
-            <div class="empty-copy">è¿æ¯ä¸åé»æ¿ãååä¸ä½ çæ³æ³ï¼AI åªå¨ä½ éè¦æ¶åºç°ã</div>
-          </div>
-          <div class="selection-box" id="selectionBox" hidden></div>
-          <aside class="courseware-recommendation-dock" id="coursewareRecommendationDock" hidden></aside>
-          <button class="selection-handle selection-handle-nw" data-scale-anchor="nw" title="ç¼©æ¾å·¦ä¸è§" aria-label="ç¼©æ¾å·¦ä¸è§" hidden></button>
-          <button class="selection-handle selection-handle-ne" data-scale-anchor="ne" title="ç¼©æ¾å³ä¸è§" aria-label="ç¼©æ¾å³ä¸è§" hidden></button>
-          <button class="selection-handle selection-handle-se" data-scale-anchor="se" title="ç¼©æ¾å³ä¸è§" aria-label="ç¼©æ¾å³ä¸è§" hidden></button>
-          <button class="selection-handle selection-handle-sw" data-scale-anchor="sw" title="ç¼©æ¾å·¦ä¸è§" aria-label="ç¼©æ¾å·¦ä¸è§" hidden></button>
-          <div class="selection-actions" id="selectionActions" hidden>
-            <div class="selection-general-actions" aria-label="éä¸­å¯¹è±¡å¸¸ç¨æä½">
-            <button id="openSelectionAiMenu" title="AI è¾å©" aria-label="AI è¾å©">AI</button>
-            <button id="moveSelectionBtn" type="button" title="ç§»å¨éä¸­è¯¾ä»¶" aria-label="ç§»å¨éä¸­è¯¾ä»¶" aria-pressed="false" hidden>
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v20M2 12h20M8 6l4-4 4 4M8 18l4 4 4-4M6 8l-4 4 4 4M18 8l4 4-4 4"/></svg>
-            </button>
-            <button id="duplicateSelectionBtn" title="å¿«ééå¤éä¸­å¯¹è±¡ï¼Ctrl+Dï¼" aria-label="éå¤éä¸­å¯¹è±¡">â§+</button>
-            <button id="editTextBtn" title="ç¼è¾æå­" aria-label="ç¼è¾æå­" hidden>T</button>
-            <div class="text-style-controls" id="textStyleControls" role="group" aria-label="æå­æ ·å¼" hidden>
-              <div class="text-size-control" aria-label="å­å·">
-                <button id="textSizeDecreaseBtn" type="button" title="åå°å­å·" aria-label="åå°å­å·">A<sup>â</sup></button>
-                <output id="textSizeOutput" title="å½åå­å·">28</output>
-                <button id="textSizeIncreaseBtn" type="button" title="å¢å¤§å­å·" aria-label="å¢å¤§å­å·">A<sup>+</sup></button>
-              </div>
-              <span class="text-style-divider" aria-hidden="true"></span>
-              <button id="textBoldBtn" type="button" title="å ç²" aria-label="å ç²" aria-pressed="false"><strong>B</strong></button>
-              <button id="textItalicBtn" type="button" title="æä½" aria-label="æä½" aria-pressed="false"><em>I</em></button>
-              <button id="textUnderlineBtn" type="button" title="ä¸åçº¿" aria-label="ä¸åçº¿" aria-pressed="false"><span class="text-underline-glyph">U</span></button>
-              <button class="text-color-control text-tool-color" id="textColorBtn" type="button" title="æå­é¢è²" aria-label="æå­é¢è²" aria-haspopup="dialog" aria-expanded="false" style="--custom-color: #17324d">
-                <span class="color-indicator" style="background: var(--custom-color, #17324d); width: 16px; height: 16px; border-radius: 50%; box-shadow: 0 0 0 1px rgba(0,0,0,0.15), inset 0 1px 2px rgba(0,0,0,0.1); display: block; pointer-events: none;"></span>
-              </button>
-              <div class="color-picker-popover" id="textColorPicker" role="dialog" aria-label="æå­é¢è²" hidden>
-                <div class="color-picker-heading">
-                  <span class="color-picker-title">æå­é¢è²</span>
-                  <button class="color-picker-close" id="closeTextColorPickerBtn" type="button" title="å³é­" aria-label="å³é­"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"></path></svg></button>
-                </div>
-                <div class="color-wheel-wrap">
-                  <canvas id="textColorWheelCanvas" width="240" height="240" aria-label="é¢è²è²è½®"></canvas>
-                  <span class="color-wheel-marker" id="textColorWheelMarker" aria-hidden="true"></span>
-                </div>
-                <label class="color-brightness-control" aria-label="æåº¦">
-                  <span class="color-brightness-track" id="textColorBrightnessTrack"></span>
-                  <input id="textColorBrightnessInput" type="range" min="0" max="100" value="100" aria-label="æåº¦" />
-                </label>
-                <div class="color-value-row">
-                  <span class="color-preview" id="textColorPreview" aria-hidden="true"></span>
-                  <input class="color-hex-input" id="textColorHexInput" type="text" value="#17324D" inputmode="text" maxlength="7" aria-label="åå­è¿å¶é¢è²å¼" />
-                  <button class="color-apply-button" id="applyTextColorBtn" type="button" title="ä½¿ç¨å½åé¢è²" aria-label="ä½¿ç¨å½åé¢è²"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"></path></svg></button>
-                </div>
-              </div>
-              <span class="text-style-divider" aria-hidden="true"></span>
-              <div class="text-align-control" role="group" aria-label="æå­å¯¹é½">
-                <button id="textAlignLeftBtn" type="button" title="å·¦å¯¹é½" aria-label="å·¦å¯¹é½" aria-pressed="true"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M4 6h16 M4 12h10 M4 18h14"/></svg></button>
-                <button id="textAlignCenterBtn" type="button" title="å±ä¸­å¯¹é½" aria-label="å±ä¸­å¯¹é½" aria-pressed="false"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M4 6h16 M7 12h10 M5 18h14"/></svg></button>
-                <button id="textAlignRightBtn" type="button" title="å³å¯¹é½" aria-label="å³å¯¹é½" aria-pressed="false"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M4 6h16 M10 12h10 M6 18h14"/></svg></button>
-              </div>
-            </div>
-            <button id="groupSelectionBtn" title="ç»åéä¸­å¯¹è±¡" aria-label="ç»åéä¸­å¯¹è±¡" hidden>â</button>
-            <button id="ungroupSelectionBtn" title="åæ¶å¯¹è±¡ç»å" aria-label="åæ¶å¯¹è±¡ç»å" hidden>â</button>
-            <button id="lockSelectionBtn" title="éå®éä¸­å¯¹è±¡" aria-label="éå®éä¸­å¯¹è±¡" hidden>ð</button>
-            <button id="deleteSelectionBtn" title="å é¤éä¸­å¯¹è±¡" aria-label="å é¤éä¸­å¯¹è±¡">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16"/><path d="M10 11v6M14 11v6"/><path d="M6 7l1 13h10l1-13"/><path d="M9 7V4h6v3"/></svg>
-            </button>
-            </div>
-            <div class="shape-auxiliary-controls" id="shapeAuxiliaryControls" role="region" aria-label="å¹³é¢å¾å½¢è¾å©å" hidden>
-              <span class="shape-auxiliary-title">è¾å©å</span>
-              <button id="shapeIncircleBtn" type="button" title="çææéèåæ¥å" aria-label="çææéèåæ¥å">åæ¥å</button>
-              <button id="shapeCircumcircleBtn" type="button" title="çææéèå¤æ¥å" aria-label="çææéèå¤æ¥å">å¤æ¥å</button>
-              <button id="shapeAuxiliaryClearBtn" type="button" title="éèå¨é¨è¾å©å" aria-label="éèå¨é¨è¾å©å">æ¸é¤</button>
-              <span id="shapeAuxiliaryStatus" role="status"></span>
-            </div>
-            <div class="coordinate-function-controls" id="coordinateFunctionControls" role="region" aria-label="åæ ç³»å½æ°å¾å" hidden>
-              <div class="coordinate-function-header">
-                <div class="coordinate-function-heading">
-                  <span class="coordinate-function-eyebrow">åæ ç³»å·¥å·</span>
-                  <span class="coordinate-function-title">å½æ°å¾å</span>
-                </div>
-                <span id="coordinateFunctionStatus" role="status">å°æªæ·»å å½æ°</span>
-                <button class="coordinate-function-toggle" id="coordinateFunctionToggleBtn" type="button" aria-expanded="true" aria-controls="coordinateFunctionBody" title="æ¶èµ·å½æ°æä½é¢æ¿">æ¶èµ·</button>
-              </div>
-              <div class="coordinate-function-body" id="coordinateFunctionBody">
-                <div class="coordinate-function-categories" role="group" aria-label="å½æ°åç±»">
-                <button type="button" data-coordinate-function-category="common" aria-pressed="true">å¸¸ç¨</button>
-                <button type="button" data-coordinate-function-category="algebra" aria-pressed="false">ä»£æ°</button>
-                <button type="button" data-coordinate-function-category="trigonometry" aria-pressed="false">ä¸è§</button>
-                <button type="button" data-coordinate-function-category="geometry" aria-pressed="false">è§£æå ä½</button>
-                </div>
-                <div class="coordinate-function-editor">
-                <div class="coordinate-function-definition">
-                  <span class="coordinate-function-field-label">å½æ°</span>
-                  <label class="coordinate-function-type-label" for="coordinateFunctionType">
-                    <select id="coordinateFunctionType" aria-label="å½æ°ç±»å">
-                      <option value="linear">ä¸æ¬¡å½æ°</option>
-                    </select>
-                  </label>
-                </div>
-                <div class="coordinate-function-parameter-group">
-                  <span class="coordinate-function-field-label">åæ°</span>
-                  <div class="coordinate-function-params" role="group" aria-label="å½æ°åæ°">
-                    <label data-coordinate-function-param="a">a<input id="coordinateFunctionParamA" type="number" step="0.1" value="1" aria-label="åæ° a"></label>
-                    <label data-coordinate-function-param="base" hidden>åº<input id="coordinateFunctionParamBase" type="number" step="0.1" value="2" aria-label="ææ°æå¯¹æ°åºæ°"></label>
-                    <label data-coordinate-function-param="n" hidden>n<input id="coordinateFunctionParamN" type="number" step="0.1" value="2" aria-label="åæ° n"></label>
-                    <label data-coordinate-function-param="b">b<input id="coordinateFunctionParamB" type="number" step="0.1" value="0" aria-label="åæ° b"></label>
-                    <label data-coordinate-function-param="c" hidden>c<input id="coordinateFunctionParamC" type="number" step="0.1" value="0" aria-label="åæ° c"></label>
-                    <label data-coordinate-function-param="d" hidden>d<input id="coordinateFunctionParamD" type="number" step="0.1" value="0" aria-label="åæ° d"></label>
-                    <label data-coordinate-function-param="h" hidden>h<input id="coordinateFunctionParamH" type="number" step="0.1" value="0" aria-label="åå¿æ¨ªåæ  h"></label>
-                    <label data-coordinate-function-param="k" hidden>k<input id="coordinateFunctionParamK" type="number" step="0.1" value="0" aria-label="åå¿çºµåæ  k"></label>
-                    <label data-coordinate-function-param="r" hidden>r<input id="coordinateFunctionParamR" type="number" step="0.1" value="4" aria-label="åå¾ r"></label>
-                    <label data-coordinate-function-param="rx" hidden>a<input id="coordinateFunctionParamRx" type="number" step="0.1" value="5" aria-label="æ¨ªåè½´ a"></label>
-                    <label data-coordinate-function-param="ry" hidden>b<input id="coordinateFunctionParamRy" type="number" step="0.1" value="3" aria-label="çºµåè½´ b"></label>
-                  </div>
-                </div>
-                <div class="coordinate-function-preview-field">
-                  <span class="coordinate-function-field-label">å¬å¼</span>
-                  <span id="coordinateFunctionFormulaPreview" class="coordinate-function-formula-preview" role="status">y=x</span>
-                </div>
-                <button id="coordinateFunctionAddBtn" type="button" title="å¨å½ååæ ç³»ä¸­çæå½æ°å¾å" aria-label="æ·»å å½æ°å¾å">æ·»å </button>
-                </div>
-                <div class="coordinate-function-drawn-section" id="coordinateFunctionDrawnSection" hidden>
-                <div class="coordinate-function-list-heading">
-                  <span>å·²ç»å¶å¾å</span>
-                  <button id="coordinateFunctionClearBtn" class="coordinate-function-clear" type="button" title="æ¸é¤å½ååæ ç³»ä¸­çå¨é¨å½æ°å¾å" aria-label="æ¸é¤å¨é¨å½æ°å¾å">æ¸é¤å¨é¨</button>
-                </div>
-                <div id="coordinateFunctionList" class="coordinate-function-list" aria-label="å·²æ·»å å½æ°"></div>
-                </div>
-              </div>
-            </div>
-            <div class="spatial-coordinate-controls" id="spatialCoordinateControls" role="region" aria-label="ç©ºé´ç´è§åæ ç³»æä½" hidden>
-              <div class="spatial-coordinate-header">
-                <div class="spatial-coordinate-title-wrap">
-                  <span class="spatial-coordinate-kicker">ç©ºé´è§£æå ä½</span>
-                  <strong>ç©ºé´ç´è§åæ ç³» O-xyz</strong>
-                </div>
-                <span id="spatialCoordinateStatus" class="spatial-coordinate-status" role="status">0 ä¸ªå¯¹è±¡</span>
-                <button id="spatialCoordinateToggleBtn" class="spatial-coordinate-toggle" type="button" aria-expanded="true" aria-controls="spatialCoordinateBody">æ¶èµ·</button>
-              </div>
-              <div class="spatial-coordinate-body" id="spatialCoordinateBody">
-                <div class="spatial-coordinate-toolbar" aria-label="ç©ºé´åæ ç³»å·¥å·æ ">
-                  <div class="spatial-coordinate-primary-row">
-                    <div class="spatial-control-group spatial-mode-tabs" role="group" aria-label="ç©ºé´åæ ç³»å·¥å·">
-                      <button type="button" data-spatial-mode="point" aria-pressed="true" aria-controls="spatialPointEditor">ç¹</button>
-                      <button type="button" data-spatial-mode="line" aria-pressed="false" aria-controls="spatialLineEditor">çº¿/åé</button>
-                      <button type="button" data-spatial-mode="plane" aria-pressed="false" aria-controls="spatialPlaneEditor">å¹³é¢</button>
-                      <button type="button" data-spatial-mode="measurement" aria-pressed="false" aria-controls="spatialMeasurementEditor">æµé</button>
-                      <button type="button" data-spatial-mode="view" aria-pressed="false" aria-controls="spatialViewEditor">è§å¾</button>
-                    </div>
-                  </div>
-                  <div class="spatial-coordinate-contexts" aria-live="polite">
-                    <div id="spatialPointEditor" class="spatial-control-group spatial-context-panel spatial-point-editor" data-spatial-context="point" role="group" aria-label="æ·»å ç©ºé´ç¹">
-                      <span class="spatial-context-heading"><small>ç´æ¥æä½</small><strong>ç¹å»åæ é¢æ¾ç¹</strong></span>
-                      <span class="spatial-inline-divider" aria-hidden="true"></span>
-                      <select id="spatialActivePlane" aria-label="ç¹æå¨å·¥ä½é¢"><option value="xy">XOY å·¥ä½é¢</option><option value="xz">XOZ å·¥ä½é¢</option><option value="yz">YOZ å·¥ä½é¢</option></select>
-                      <select id="spatialSnapMode" aria-label="åæ å¸é"><option value="integer">æ´æ°å¸é</option><option value="half">0.5 å¸é</option><option value="free">èªç±åæ </option></select>
-                      <span class="spatial-direct-hint">ç¹å»ç©ºç½å¤æ·»å ï¼æå¨å·²æç¹è°æ´åæ </span>
-                      <button id="spatialPrecisionToggleBtn" type="button" aria-expanded="false" aria-controls="spatialPrecisionFields">ç²¾ç¡®è¾å¥</button>
-                      <span id="spatialPrecisionFields" class="spatial-precision-fields" hidden>
-                        <input id="spatialPointName" type="text" maxlength="6" placeholder="ç¹å" aria-label="ç¹åç§°">
-                        <span class="spatial-coordinate-triplet" aria-label="ç©ºé´ç¹åæ ">
-                          <label>x<input id="spatialPointX" type="number" step="0.5" value="3" aria-label="ç¹ç x åæ "></label>
-                          <label>y<input id="spatialPointY" type="number" step="0.5" value="2" aria-label="ç¹ç y åæ "></label>
-                          <label>z<input id="spatialPointZ" type="number" step="0.5" value="4" aria-label="ç¹ç z åæ "></label>
-                        </span>
-                        <button id="spatialAddPointBtn" class="spatial-primary-action" type="button">æ·»å </button>
-                        <button id="spatialUpdatePointBtn" type="button" hidden>æ´æ°</button>
-                      </span>
-                    </div>
-                    <div id="spatialLineEditor" class="spatial-control-group spatial-context-panel spatial-construction-controls" data-spatial-context="line" role="group" aria-label="ç©ºé´çº¿ä¸åéæé " hidden>
-                      <span class="spatial-context-heading"><small>ç´æ¥æä½</small><strong id="spatialLinePrompt">è¯·éæ©ç¬¬ 1 ä¸ªç¹</strong></span>
-                      <span class="spatial-inline-divider" aria-hidden="true"></span>
-                      <button type="button" data-spatial-line-kind="line" aria-pressed="true">ç´çº¿</button>
-                      <button type="button" data-spatial-line-kind="vector" aria-pressed="false">åé</button>
-                      <span class="spatial-direct-hint">ä¾æ¬¡ç¹å»ä¸¤ä¸ªç¹ï¼ç¹å»ç©ºç½å¤ä¼èªå¨å»ºç«ç¹</span>
-                      <button id="spatialLineResetBtn" type="button">éæ°éæ©</button>
-                    </div>
-                    <div id="spatialPlaneEditor" class="spatial-control-group spatial-context-panel spatial-construction-controls" data-spatial-context="plane" role="group" aria-label="ç©ºé´å¹³é¢æé " hidden>
-                      <span class="spatial-context-heading"><small>ç´æ¥æä½</small><strong id="spatialPlanePrompt">è¯·éæ©ç¬¬ 1 ä¸ªç¹</strong></span>
-                      <span class="spatial-inline-divider" aria-hidden="true"></span>
-                      <span class="spatial-direct-hint">ä¾æ¬¡ç¹å»ä¸ä¸ªä¸å±çº¿çç¹</span>
-                      <button id="spatialPlaneResetBtn" type="button">éæ°éæ©</button>
-                    </div>
-                    <div id="spatialMeasurementEditor" class="spatial-control-group spatial-context-panel spatial-measurement-controls" data-spatial-context="measurement" role="group" aria-label="ç©ºé´å ä½æµé" hidden>
-                      <span class="spatial-context-heading"><small>æºè½è¯å«</small><strong id="spatialMeasurementPrompt">è¯·éæ©ç¬¬ 1 ä¸ªå¯¹è±¡</strong></span>
-                      <span class="spatial-inline-divider" aria-hidden="true"></span>
-                      <span class="spatial-direct-hint">ç¹+ç¹æµè·ç¦»ï¼ç¹+å¹³é¢æµè·ç¦»ï¼åé+åéæµå¤¹è§ï¼ç´çº¿+å¹³é¢æµå¤¹è§</span>
-                      <button id="spatialMeasurementResetBtn" type="button">éæ°éæ©</button>
-                    </div>
-                    <div id="spatialViewEditor" class="spatial-control-group spatial-context-panel spatial-view-controls" data-spatial-context="view" role="group" aria-label="ç©ºé´åæ ç³»è§å¾ä¸å¯¹è±¡" hidden>
-                      <label class="spatial-compact-field"><span>è§è§</span><select id="spatialViewPresetSelect" aria-label="ç©ºé´åæ ç³»æ åè§è§"><option value="isometric">ç­è½´æµ</option><option value="top">ä¿¯è§</option><option value="front">æ­£è§</option><option value="side">ä¾§è§</option><option value="custom" hidden>èªç±è§è§</option></select></label>
-                      <span class="spatial-zoom-controls" role="group" aria-label="ç¼©æ¾ç©ºé´åæ ç³»"><button id="spatialZoomOutBtn" type="button">ç¼©å°</button><button id="spatialZoomResetBtn" class="spatial-scale-value" type="button" title="æ¢å¤é»è®¤ç¼©æ¾"><span id="spatialViewScaleValue">92%</span></button><button id="spatialZoomInBtn" type="button">æ¾å¤§</button></span>
-                      <label class="spatial-compact-field"><span>åèé¢</span><select id="spatialReferencePlaneDisplay" aria-label="ç©ºé´åæ ç³»åèé¢æ¾ç¤º"><option value="xy">XOY</option><option value="xz">XOZ</option><option value="yz">YOZ</option><option value="all">å¨é¨</option><option value="none">å³é­</option><option value="mixed" hidden>ç»å</option></select></label>
-                      <span class="spatial-display-controls" role="group" aria-label="è¾å©æ¾ç¤º"><button type="button" data-spatial-display="grid" aria-pressed="true">ç½æ ¼</button><button type="button" data-spatial-display="projections" aria-pressed="true">æå½±</button></span>
-                      <span class="spatial-inline-divider" aria-hidden="true"></span>
-                      <select id="spatialEntityList" aria-label="ç©ºé´å¯¹è±¡åè¡¨"><option value="">å¯¹è±¡åè¡¨</option></select>
-                      <button id="spatialDeleteEntityBtn" class="spatial-danger-action" type="button">å é¤</button>
-                    </div>
-                    <span hidden><select id="spatialReferenceA"></select><select id="spatialReferenceB"></select><select id="spatialReferenceC"></select><button id="spatialAddVectorBtn" type="button"></button><button id="spatialAddLineBtn" type="button"></button><button id="spatialAddPlaneBtn" type="button"></button><select id="spatialMeasurementType"><option value="point-distance"></option></select><select id="spatialMeasurementA"></select><select id="spatialMeasurementB"></select><button id="spatialAddMeasurementBtn" type="button"></button></span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="fold-model-controls" id="foldModelControls" role="region" aria-label="2D ä¸ 3D å ä½æ¨¡åæä½" hidden>
-              <div class="fold-panel-header">
-                <div class="fold-panel-identity">
-                  <span class="fold-panel-title">å ä½æ¨¡å</span>
-                  <span class="fold-mode-badge" id="foldModeBadge">2D</span>
-                </div>
-                <span class="fold-metric-summary" id="foldMetricSummary" role="status">å ä½é</span>
-                <button class="fold-panel-toggle" id="foldPanelToggleBtn" type="button" aria-expanded="true" aria-controls="foldPanelBody" title="æ¶èµ·æ¨¡åæä½é¢æ¿">æ¶èµ·</button>
-              </div>
-              <div class="fold-panel-body" id="foldPanelBody">
-              <div class="fold-primary-controls" aria-label="æ¨¡åä¸»è¦æä½">
-              <button id="foldCreaseSelectBtn" type="button" title="åæ¢å½åç¼è¾æç" aria-label="åæ¢å½åç¼è¾æç">æç 1/1</button>
-              <span class="fold-preflight-status" id="foldPreflightStatus" role="status">å¯çæ 3D</span>
-              <button id="foldUpgrade3dBtn" type="button" title="ä¿çå·²ææé¢å¹¶è¡¥é½å¼æ¾è¾¹çï¼é­åæ ¡éªéè¿åçæå¯æè½¬ 3D ç«ä½" aria-label="è¡¥é½å¹¶çæ 3D ç«ä½">çæ 3D ç«ä½</button>
-              <label for="foldAmountRange">æå ç¨åº¦</label>
-              <input id="foldAmountRange" type="range" min="0" max="100" step="1" value="0" aria-label="æå è¿åº¦" />
-              <output id="foldAmountValue" for="foldAmountRange">0%</output>
-              <button id="foldSideBtn" type="button" title="åæ¢æå ä¾§" aria-label="åæ¢æå ä¾§">æ¢ä¾§</button>
-              <button id="foldResetBtn" type="button" title="æ¢å¤äºç»´æçåå§ç¶æ" aria-label="æ¢å¤äºç»´æçåå§ç¶æ">å¤ä½</button>
-              <button id="foldUnfoldBtn" type="button" title="æçå®å±è¾¹å±å¼ææç«ä½è¡¨é¢" aria-label="ä¸é®å±å¼ç«ä½æ¨¡å" hidden>ä¸é®å±å¼</button>
-              </div>
-              <div class="fold-teaching-controls" id="foldTeachingControls" hidden aria-label="éé¢å±å¼æå­¦æ§å¶">
-                <span class="fold-control-label">å±å¼è¿ç¨</span>
-                <div class="fold-playback-buttons">
-                  <button id="foldStepPrevBtn" type="button" title="ä¸ä¸æ­¥" aria-label="å±å¼ä¸ä¸æ­¥">ä¸ä¸æ­¥</button>
-                  <button id="foldPlayPauseBtn" type="button" title="æ­æ¾ææåå±å¼è¿ç¨" aria-label="æ­æ¾ææåå±å¼è¿ç¨">æå</button>
-                  <button id="foldStepNextBtn" type="button" title="ä¸ä¸æ­¥" aria-label="å±å¼ä¸ä¸æ­¥">ä¸ä¸æ­¥</button>
-                </div>
-                <div class="fold-progress-group">
-                  <input id="foldTeachingProgress" type="range" min="0" max="100" step="1" value="0" aria-label="å±å¼è¿ç¨è¿åº¦" />
-                  <output id="foldTeachingPercent" for="foldTeachingProgress">0%</output>
-                </div>
-                <output id="foldTeachingStep" for="foldTeachingProgress">ç­å¾å±å¼</output>
-              </div>
-              <div class="fold-3d-view-controls" id="fold3dViewControls" hidden>
-                <span class="fold-control-label">è§å¯è§è§</span>
-                <button id="foldOrbitModeBtn" type="button" title="æå¨ç¯ç»è§å¯ï¼å¯åæ¢ä¸ºå¹³ç§»è§å¯ç¦ç¹" aria-label="åæ¢ 3D ç¯ç»æå¹³ç§»è§å¯" aria-pressed="true">ç¯ç»</button>
-                <button id="foldAuxiliaryModeBtn" type="button" title="å¨ç«ä½çå®è¾¹ä¸éåä¸¤ç¹å¹¶è¿æè¾å©çº¿" aria-label="å¼å¯æå³é­ 3D è¾å©çº¿æ¨¡å¼" aria-pressed="false">è¾å©çº¿</button>
-                <button id="foldSectionModeBtn" type="button" title="ç¨è¾å©çº¿çä¸¤ä¸ªç«¯ç¹åç¬¬ä¸ä¸ªç¹ç¡®å®æªé¢ï¼æ²¡æè¾å©çº¿æ¶ä¾æ¬¡éæ©ä¸ä¸ªç¹" aria-label="å¼å¯æå³é­ 3D æªé¢éç¹æ¨¡å¼" aria-pressed="false">æªé¢</button>
-                <button id="foldXrayBtn" type="button" title="éè§è§å¯æ¨¡åèé¢ååé¨ç»æ" aria-label="åæ¢ 3D éè§è§å¯" aria-pressed="false">éè§</button>
-                <span class="fold-auxiliary-sphere-controls" id="foldAuxiliarySphereControls" role="group" aria-label="ç«ä½è¾å©ç">
-                  <span class="fold-control-label">è¾å©ç</span>
-                  <button id="foldInsphereBtn" type="button" title="çææéèåæ¥ç" aria-label="çææéèåæ¥ç">åæ¥ç</button>
-                  <button id="foldCircumsphereBtn" type="button" title="çææéèå¤æ¥ç" aria-label="çææéèå¤æ¥ç">å¤æ¥ç</button>
-                  <button id="foldAuxiliarySphereClearBtn" type="button" title="éèå¨é¨è¾å©ç" aria-label="éèå¨é¨è¾å©ç">æ¸é¤</button>
-                  <span id="foldAuxiliarySphereStatus" role="status"></span>
-                </span>
-                <span class="fold-range-control">
-                  <label for="foldViewYawRange" title="æ°´å¹³æè½¬è§è§">æ°´å¹³</label>
-                  <input id="foldViewYawRange" type="range" min="-180" max="180" step="1" value="-24" aria-label="3D æ°´å¹³è§è§ï¼360 åº¦ï¼" />
-                </span>
-                <span class="fold-range-control">
-                  <label for="foldViewPitchRange" title="ä¸ä¸ 360 åº¦æè½¬è§è§">ä¿¯ä»°</label>
-                  <input id="foldViewPitchRange" type="range" min="-180" max="180" step="1" value="24" aria-label="3D ä¿¯ä»°è§è§ï¼360 åº¦ï¼" />
-                </span>
-                <span class="fold-range-control fold-scale-control">
-                  <label for="foldViewScaleRange" title="ç¼©æ¾æ¨¡å">ç¼©æ¾</label>
-                  <input id="foldViewScaleRange" type="range" min="55" max="120" step="1" value="90" aria-label="3D æ¨¡åç¼©æ¾" />
-                  <output id="foldViewScaleValue" class="fold-view-scale-value" aria-label="3D æ¨¡åç¼©æ¾" title="å°æéæ¾å¨æ¨¡åä¸ï¼æ»è½®æè§¦æ§æ¿ç¼©æ¾">90%</output>
-                </span>
-                <button id="foldViewResetBtn" type="button" title="æ¢å¤é»è®¤ 3D è§è§" aria-label="æ¢å¤é»è®¤ 3D è§è§">éç½®è§è§</button>
-                <span class="fold-auxiliary-status" id="foldAuxiliaryStatus" role="status" hidden>ç¹å»è¾¹éæ©ç¬¬ä¸ä¸ªç¹</span>
-                <button id="foldAuxiliaryUndoBtn" type="button" title="æ¤éä¸ä¸æ¡ 3D è¾å©çº¿" aria-label="æ¤éä¸ä¸æ¡ 3D è¾å©çº¿" hidden>æ¤éè¾å©çº¿</button>
-                <button id="foldAuxiliaryClearBtn" type="button" title="æ¸ç©ºå½åæ¨¡åçå¨é¨ 3D è¾å©çº¿" aria-label="æ¸ç©ºå½åæ¨¡åçå¨é¨ 3D è¾å©çº¿" hidden>æ¸ç©ºè¾å©çº¿</button>
-                <span class="fold-section-status" id="foldSectionStatus" role="status" hidden>è¯·éæ©ç¡®å®æªé¢çä¸ä¸ªç¹</span>
-                <button id="foldSectionCancelBtn" type="button" title="åæ¶æ¬æ¬¡æªé¢éç¹ï¼ä¸å é¤å·²ç»åå»ºçæªé¢" aria-label="åæ¶æ¬æ¬¡ 3D æªé¢éç¹" hidden>åæ¶éç¹</button>
-                <button id="foldSectionClearBtn" type="button" title="æ¸é¤å½åæ¨¡åå·²ç»åå»ºçå¨é¨æªé¢" aria-label="æ¸é¤å½åæ¨¡åå¨é¨ 3D æªé¢" hidden>æ¸é¤æªé¢</button>
-                <button id="foldSectionOnlyBtn" type="button" title="éèåç«ä½ï¼åªæ¾ç¤ºçå®æªé¢" aria-label="åæ¢åªç 3D æªé¢" aria-pressed="false" hidden>åªçæªé¢</button>
-                <span class="fold-cut-status" id="foldCutStatus" role="status" hidden>åå²åå°éªè¯ä¸¤ä¾§å°é­æ§åä½ç§¯å®æ</span>
-                <button id="foldCutPreviewBtn" type="button" title="ç¨èè²åæ©è²åå«é¢è§åå²åçä¸¤ä¾§" aria-label="é¢è§æå³é­ 3D çå®åå²" aria-pressed="false" hidden>é¢è§åå²</button>
-                <button id="foldCutKeepPositiveBtn" type="button" title="çå®åå²å¹¶ä¿çèè²ä¸ä¾§ï¼ä¸æ¬¡æ¤éæ¢å¤åç«ä½" aria-label="çå®åå²å¹¶ä¿çèè²ä¸ä¾§" hidden>ä¿çèä¾§</button>
-                <button id="foldCutKeepNegativeBtn" type="button" title="çå®åå²å¹¶ä¿çæ©è²ä¸ä¾§ï¼ä¸æ¬¡æ¤éæ¢å¤åç«ä½" aria-label="çå®åå²å¹¶ä¿çæ©è²ä¸ä¾§" hidden>ä¿çæ©ä¾§</button>
-                <button id="foldCutSplitBtn" type="button" title="æç«ä½çå®åæä¸¤ä¸ªå°é­å¯¹è±¡ï¼ä¸æ¬¡æ¤éæ¢å¤åç«ä½" aria-label="ææªé¢åæä¸¤ä¸ªå°é­ç«ä½" hidden>åæä¸¤å</button>
-              </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <div class="ai-processing-indicator" id="aiProcessingIndicator" role="status" aria-live="polite" aria-hidden="true" hidden>
-        <span class="ai-processing-spinner" aria-hidden="true"></span>
-        <span data-processing-label>æ­£å¨åå¤åå®¹â¦</span>
-      </div>
-
-      <aside class="assistant-panel" id="assistantPanel" aria-label="AI ç»å¸ç»æå¼¹çª" aria-live="polite">
-        <div class="assistant-head">
-          <div>
-            <div class="eyebrow">AI ASSIST</div>
-            <h2>éä¸­åå®¹åç»§ç»­</h2>
-          </div>
-          <div class="assistant-head-actions">
-            <button class="close-button" id="closeAiBtn" title="å³é­ AI é¢æ¿" aria-label="å³é­ AI é¢æ¿">Ã</button>
-          </div>
-        </div>
-        <div class="selected-context" id="selectedContext">
-          <span class="context-icon">â</span>
-          <div><small>å½åéåº</small><strong id="selectedContextText">è¿æ²¡æéä¸­é»æ¿åå®¹</strong></div>
-        </div>
-        <label class="query-label" for="aiQuery">è¦å¤ççåå®¹</label>
-        <div class="query-row"><input id="aiQuery" placeholder="ä¾å¦ï¼å­£é£çå½¢æå ç´ " /><button id="runQueryBtn" title="å¼å§å¤ç">â</button></div>
-        <div class="concept-line" id="conceptLine" hidden></div>
-        <div class="result-area" id="resultArea">
-          <div class="result-placeholder"><span>â¦</span><p>AI çç»æä¼ä½ä¸ºé»æ¿å¯¹è±¡æå¥ï¼ä¸ä¼è¦çä½ çç¬è¿¹ã</p></div>
-        </div>
-      </aside>
-    </main>
-  </div>
-
-  <dialog class="courseware-center-dialog" id="coursewareCenterDialog" aria-label="ç»ä¸å¹³å°è¯¾ä»¶ä¸­å¿"></dialog>
-
-  <dialog class="vocabulary-classroom-dialog" id="vocabularyClassroomDialog" aria-label="ææè¯æ±è¯¾å "></dialog>
-  <dialog class="laboratory-system-dialog" id="laboratorySystemDialog" aria-label="å®éªå®¤ç¬ç«ç³»ç»"></dialog>
-
-  <dialog class="lab-dialog" id="labDialog" aria-labelledby="labDialogTitle">
-    <section class="lab-dialog-content">
-      <header class="lab-dialog-head">
-        <div>
-          <div class="eyebrow">BLACKBOARD LAB</div>
-          <h2 id="labDialogTitle">å®éªå®¤</h2>
-          <p>è¿éç¨äºæ¾ç½®é»æ¿çæ©å±åè½åå®éªæ§å·¥å·ã</p>
-        </div>
-        <button class="close-button" id="closeLabBtn" type="button" title="å³é­å®éªå®¤" aria-label="å³é­å®éªå®¤">Ã</button>
-      </header>
-      <section class="lab-feature-grid" aria-label="å®éªå®¤åè½åº">
-        <article class="lab-feature-card lab-feature-card--active" data-lab-feature="vocabulary-classroom" tabindex="0" role="button" aria-label="æå¼ææè¯æ±è¯¾å å°å­¦ä¸å¹´çº§ä¸å">
-          <div class="lab-feature-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/><path d="M8 7h8M8 11h6"/></svg>
-          </div>
-          <div>
-            <h3>ææè¯æ±è¯¾å </h3>
-            <p>äººæç PEPï¼2012ï¼ä¸å¹´çº§ä¸åï¼6 ä¸ªååææè¯è¡¨ä¸æ¬è¯¾å°æµã</p>
-          </div>
-          <span class="lab-feature-status">æå¼è¯è¡¨</span>
-        </article>
-        <article class="lab-feature-card lab-feature-card--active" data-lab-feature="chemistry-reaction-sandbox" tabindex="0" role="button" aria-label="æå¼åé«ä¸­åå­¦ååºæ²ç">
-          <div class="lab-feature-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.31L4.43 18a2 2 0 0 0 1.69 3h11.76a2 2 0 0 0 1.69-3L14 9.31V2"/><path d="M8.5 2h7M7 16h10"/></svg>
-          </div>
-          <div>
-            <h3>åé«ä¸­åå­¦ååºæ²ç</h3>
-            <p>ç¬ç«åå­¦å®éªå·¥ä½å°ï¼ä¿çå¨æãè¯åãå ç­ãååºåå®å¨ç³»ç»ã</p>
-          </div>
-          <span class="lab-feature-status">æå¼å®éªç³»ç»</span>
-        </article>
-        <article class="lab-feature-card lab-feature-card--active" data-lab-feature="electrical-experiment-sandbox" tabindex="0" role="button" aria-label="æå¼çµå­¦å®éªæ²ç">
-          <div class="lab-feature-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h3l2-5 4 10 2-5h7"/><path d="M5 6V4m0 0H3m2 0h2M19 18v2m0 0h-2m2 0h2"/><circle cx="5" cy="12" r="1.5"/><circle cx="19" cy="12" r="1.5"/></svg>
-          </div>
-          <div>
-            <h3>çµå­¦å®éªæ²ç</h3>
-            <p>ç¬ç«æ éç»å¸ï¼èªç±å¸ç½®å¨æãç«¯å­æ¥çº¿ãå®æ¶è¯»æ°ä¸éè¯¯è¯æ­ã</p>
-          </div>
-          <span class="lab-feature-status">æå¼å®éªç»å¸</span>
-        </article>
-      </section>
-      <footer class="lab-dialog-foot">
-        <span>å®éªå®¤ä¸­çåè½ä¸ä¼å½±åå½åé»æ¿åå®¹ã</span>
-        <button class="text-button dialog-confirm" id="labDoneBtn" type="button">ç¥éäº</button>
-      </footer>
-    </section>
-  </dialog>
-
-<script src="./assets/semicircle-hemisphere-conversion-NVYDCGNU.js"></script>
-<!-- Beta-only notice. Remove this one line and the beta-notice/ directory before public release. -->
-<script src="./assets/beta-notice-ZHB5WP5W.js" defer></script>
-<script type="module" src="./assets/main-JKXIJAO6.js"></script>
-</body>
-</html>
-
