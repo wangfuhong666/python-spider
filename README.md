@@ -51,7 +51,6 @@ pip install requests lxml jsonpath jsonpath-ng DrissionPage PyExecJS loguru open
 | `16_逆向登录` | 登录流程逆向，含 RSA 加密与 eval 混淆处理 |
 | `17_DP自动化` | `DrissionPage` 自动化 |
 | `DP监听` | `DrissionPage` 网络请求监听 |
-| 综合实战项目 | 已拆分到独立仓库 → **[Python 爬虫项目](https://github.com/wangfuhong666/Python-Spider-Projects)**（B站热度监控、唯品会价格监控、IOI 2026 实时排行榜、视频逆向、多站点政策采集等 8 个项目） |
 
 ## 运行方式
 

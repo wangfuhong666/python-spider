@@ -62,3 +62,6 @@ desktop.ini
 
 # ===== WorkBuddy 本地项目数据 =====
 .workbuddy/
+
+# ===== 本地工具运行时缓存（Playwright MCP 会话日志 / 页面快照）=====
+.playwright-mcp/
